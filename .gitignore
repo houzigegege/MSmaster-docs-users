@@ -1,0 +1,8 @@
+# MkDocs 构建输出（由 CI 生成并推到 gh-pages，一般不必提交）
+/site/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/

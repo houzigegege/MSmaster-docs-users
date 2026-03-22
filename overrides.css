@@ -1,0 +1,198 @@
+/* Home cards styling: keep it publication-like and consistent with Material theme. */
+
+.hero-banner {
+  margin-top: 1.2rem;
+  border-radius: 1rem;
+  background:
+    linear-gradient(180deg, rgba(63, 81, 181, 0.16), rgba(63, 81, 181, 0.04));
+  border: 1px solid rgba(63, 81, 181, 0.25);
+}
+
+.hero-banner__inner {
+  padding: 1.2rem 1.25rem;
+}
+
+.hero-banner h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.85rem;
+  letter-spacing: 0.01em;
+}
+
+.hero-banner p {
+  margin: 0.25rem 0 0.95rem 0;
+  color: var(--md-typeset-color-secondary);
+  line-height: 1.5;
+  max-width: 72ch;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.85rem;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-pill {
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--md-typeset-color-secondary);
+  font-size: 0.85rem;
+  line-height: 1.2;
+}
+
+.grid.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.grid.cards a.card {
+  display: block;
+  padding: 1.05rem 1.1rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  color: inherit;
+  background: var(--md-card-bg-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.grid.cards a.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(63, 81, 181, 0.45);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.grid.cards .card__title {
+  font-weight: 650;
+  letter-spacing: 0.01em;
+}
+
+.grid.cards .card__subtitle {
+  margin-top: 0.35rem;
+  color: var(--md-typeset-color-secondary);
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+}
+
+/* Home page overview figure */
+.home-figure {
+  margin: 1.25rem 0 1.5rem 0;
+  text-align: center;
+}
+
+.home-figure img {
+  /* Keep figure readable but not dominating the home page */
+  max-width: min(100%, 640px);
+  width: 100%;
+  height: auto;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.home-figure__caption {
+  margin-top: 0.65rem;
+  font-size: 0.9rem;
+  color: var(--md-typeset-color-secondary);
+}
+
+/* Improve long tables readability inside manual sections */
+table {
+  font-size: 0.96rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Top bar: subtle gradient + depth (indigo palette, publication-friendly)     */
+/* -------------------------------------------------------------------------- */
+.md-header {
+  background: linear-gradient(
+    165deg,
+    #5c6bc0 0%,
+    #3f51b5 42%,
+    #303f9f 100%
+  );
+  /* Top highlight + soft shadow so the bar separates cleanly from content */
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.14) inset,
+    0 3px 12px rgba(0, 0, 0, 0.14);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* Second row (section tabs): slightly deeper tone, reads as one unit with header */
+.md-tabs {
+  background: linear-gradient(180deg, #303f9f 0%, #283593 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.md-tabs__link {
+  opacity: 0.92;
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+.md-tabs__link:hover {
+  opacity: 1;
+}
+
+.md-tabs__item--active .md-tabs__link {
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* Dark scheme: deeper blues, stronger separation from page body */
+[data-md-color-scheme="slate"] .md-header {
+  background: linear-gradient(
+    165deg,
+    #5c6bc0 0%,
+    #3949ab 45%,
+    #1a237e 100%
+  );
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 4px 18px rgba(0, 0, 0, 0.45);
+  border-bottom-color: rgba(0, 0, 0, 0.35);
+}
+
+[data-md-color-scheme="slate"] .md-tabs {
+  background: linear-gradient(180deg, #1a237e 0%, #0d1642 100%);
+  border-top-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* Slightly clearer site title in the bar */
+.md-header__topic span {
+  letter-spacing: 0.015em;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+/* Header: larger logo, visually aligned to the far left of the blue bar */
+.md-header__inner.md-grid {
+  /* Slightly reduce default grid gutter so the logo sits closer to the viewport edge */
+  padding-inline-start: 0.35rem;
+}
+
+.md-header__button.md-logo {
+  /* First item in the header row — nudge left for “flush left” look */
+  margin-inline-start: -0.15rem;
+  margin-inline-end: 0.15rem;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 3rem;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
+}
+

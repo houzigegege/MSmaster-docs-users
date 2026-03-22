@@ -1,0 +1,2 @@
+# MkDocs + Material theme (match local: pip install -r requirements.txt)
+mkdocs-material>=9.5.0
