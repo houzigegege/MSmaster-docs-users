@@ -16,7 +16,7 @@ This section describes how to quickly use MSmaster based on the data type you ha
 
 Data format: CSV files with one metabolite/feature per row (e.g. RT_MZ or compound labels), one sample or group per column (e.g. Group1, Group1.1, Group2), and intensity values. Multiple samples correspond to multiple CSV files in the same folder.
 
-![](assets/manual/img_0041.png)
+![](assets/manual/img_0042.png)
 
 Available features:
 
@@ -32,27 +32,27 @@ Quick steps for Batch Metabolomics analysis:
 
 Set Project Path (root directory for results);Set Feature Table Folder (folder containing one CSV per sample)
 
-![](assets/manual/img_0042.png)
+![](assets/manual/img_0043.png)
 
 Expand Batch Metabolomics Analysis and click Start Batch Analysis
 
-![](assets/manual/img_0043.png)
+![](assets/manual/img_0044.png)
 
 View results in the Single Sample Result panels on the right. Select a sample and click the analyze button.
 
-![](assets/manual/img_0044.png)
+![](assets/manual/img_0045.png)
 
 Visualization results
 
-![](assets/manual/img_0045.png)
+![](assets/manual/img_0046.png)
 
 (Optional) Enter molecular weights in Input Data, configure Manage Reaction Types, and click Run Prediction
 
-![](assets/manual/img_0046.png)
+![](assets/manual/img_0047.png)
 
 (Optional) reaction product annotation results
 
-![](assets/manual/img_0047.png)
+![](assets/manual/img_0048.png)
 
 ## I Have MS/MS Spectra (MGF Format)
 
@@ -68,57 +68,51 @@ Module: MS Identification, Molecular Networks
 
 Quick steps (MS Identification):
 
-① Select Mass Spectrum File (MGF) and set Acquisition Mode (Positive/Negative)
+Select Mass Spectrum File (MGF) and set Acquisition Mode (Positive/Negative) ; load Mass Spectrum.
 
-② Click Load Mass Spectrum File
+![](assets/manual/img_0049.png)
 
-③ Basic Search: Load MGF database → Set m/z tolerance, similarity method, TOP N → Run Basic Search
+Basic Search: Load MGF database → Set m/z tolerance, similarity method, TOP N → Run Basic Search
 
-④ AI Search: Load NPZ fingerprint database → Select DNN model type and checkpoint → Set Mass Tolerance, Min DNN Similarity → Batch Identify All Spectra
+![](assets/manual/img_0050.png)
+
+AI Search: Load NPZ fingerprint database → Select DNN model type and checkpoint → Set Mass Tolerance, Min DNN Similarity → Batch Identify All Spectra
+
+![](assets/manual/img_0051.png)
 
 ⑤ View candidate compounds in Identification Results (Basic) or Identification Results (AI)
 
+![](assets/manual/img_0052.png)
+
 Quick steps (Molecular Networks):
 
-① Set Single Experiment Path (output directory)
+Set Single Experiment Path (output directory)
 
-② Select MGF File
+![](assets/manual/img_0053.png)
 
-③ Expand Analysis Parameters and choose Similarity Method (cosine, neutral_loss, dnn_fingerprint, Transformer_DNN, or hierarchical_fusion)
+Select MGF File
 
-④ Set Similarity Threshold, Max Edges per Node, etc.
+![](assets/manual/img_0054.png)
 
-⑤ Click Start Network Analysis
+Expand Analysis Parameters and choose Similarity Method (cosine, neutral_loss, dnn_fingerprint, Transformer_DNN, or hierarchical_fusion);Set Similarity Threshold, Max Edges per Node, etc;
 
-⑥ Select Network Component on the right to view the graph; click nodes to view spectra and AI identification results (if AI Search is enabled)
+![](assets/manual/img_0055.png)
 
-## I Have Feature Tables + MS/MS Spectra
+Set database search parameters (optional)
 
-Available features:
+![](assets/manual/img_0056.png)
 
-• Run Batch Metabolomics for differential analysis, then use Molecular Networks Metabolomics Filter to filter spectra by experimental/control ratio before building the network
+![](assets/manual/img_0057.png)
 
-• Or build the network first, then load metabolomics data in Advanced Analysis for node coloring, box plots, etc.
+Click Start Network Analysis.
 
-Module: Batch Metabolomics Analysis → Molecular Networks; or Molecular Networks → Advanced Analysis
+Select Network Component on the right to view the graph; click nodes to view spectra and AI identification results (if AI Search is enabled)
 
-Quick steps (metabolomics-filtered network):
+![](assets/manual/img_0058.png)
 
-① Complete batch analysis in Batch Metabolomics to obtain FeatureTable.csv and MetaboResult.csv per sample
+Remember to export all result files (molecular network, mass spectrometry annotation results, and related parameters)
 
-② In Molecular Networks, set MGF File and Experiment Path
-
-③ Expand Filter Settings and enable Metabolomics Filter: set Feature Table File, Experimental Group, Control Group, Ratio Threshold
-
-④ Follow steps in section 2 to build the network
-
-Quick steps (integrate metabolomics after network building):
-
-① Complete network analysis in Molecular Networks and click Export All Results
-
-② In Advanced Analysis, set Experiment Folder to the Molecular Networks output directory and click Auto-Import Files
-
-③ Load Metabolomics Data (Feature Table, Metabolomics Results); click nodes in Network Visualization to view box plots and intensity-based coloring
+![](assets/manual/img_0059.png)
 
 ## I Have a SMILES List (CSV)
 

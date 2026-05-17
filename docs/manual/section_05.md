@@ -2,7 +2,7 @@
 
 ## Overview
 
-![](assets/manual/img_0048.png)
+![](assets/manual/img_0060.png)
 
 Fusion Molecular Networks builds a molecular network by combining multiple connection types in one unified graph. The core rule is: connection types are processed in a fixed order, and you can enable/disable each type using Use checkboxes.Core connection types and fixed processing order:1) Cosine connections; 2) Neutral loss connections; 3) Standard DNN connections; 4) Transformer DNN connections
 
@@ -12,7 +12,7 @@ Fusion Molecular Networks builds a molecular network by combining multiple conne
 
 • In Experiment Path Setting, choose the folder where results (network files, component table, etc.) will be saved.
 
-![](assets/manual/img_0049.png)
+![](assets/manual/img_0061.png)
 
 ② Select the input MGF file
 
@@ -20,7 +20,7 @@ Fusion Molecular Networks builds a molecular network by combining multiple conne
 
 • The analysis will filter, normalize, and build the network based on the selected spectra.
 
-![](assets/manual/img_0050.png)
+![](assets/manual/img_0062.png)
 
 ③ (Optional) Configure filters (only if needed)
 
@@ -30,7 +30,7 @@ Fusion Molecular Networks builds a molecular network by combining multiple conne
 
 - Enables filtering before network construction.
 
-![](assets/manual/img_0051.png)
+![](assets/manual/img_0063.png)
 
 • Reactant Filter:
 
@@ -38,7 +38,7 @@ Fusion Molecular Networks builds a molecular network by combining multiple conne
 
 - Enables filtering before network construction.
 
-![](assets/manual/img_0052.png)
+![](assets/manual/img_0064.png)
 
 ④ Set Analysis Parameters
 
@@ -68,7 +68,7 @@ Cosine -> Neutral loss -> Standard DNN -> Transformer DNN
 
 • Lower Max Edges = fewer edges per node = more controlled graph density.
 
-![](assets/manual/img_0053.png)
+![](assets/manual/img_0065.png)
 
 Set Max Component Size (recommended):Fusion Max Component Size limits the maximum number of nodes per connected component. If a component is larger than the limit, the program splits it into smaller components for stable visualization and analysis.
 
@@ -94,7 +94,7 @@ Set Max Component Size (recommended):Fusion Max Component Size limits the maximu
 
 • When finished successfully, basic-search candidate matches are available in the analysis results and node-related details.
 
-![](assets/manual/img_0054.png)
+![](assets/manual/img_0066.png)
 
 ⑦ (Optional) Configure Database Search (AI Search)
 
@@ -122,7 +122,7 @@ Set Max Component Size (recommended):Fusion Max Component Size limits the maximu
 
 • When finished successfully, candidate identification results can be viewed from node-level details in the network panel.
 
-![](assets/manual/img_0055.png)
+![](assets/manual/img_0067.png)
 
 ⑧ Please remember to click the 'Export All Results' button to export molecular network results and database search results
 
@@ -160,18 +160,22 @@ Perform result analysis in the result display interface on the right
 
 The result display interface provides node visualization of molecular networks
 
-![](assets/manual/img_0056.png)
+![](assets/manual/img_0068.png)
 
 Click on each node on the right side of the mouse to view the database retrieval results
 
-![](assets/manual/img_0057.png)
+![](assets/manual/img_0069.png)
 
 View results in the advanced analysis interface
 
 In the advanced analysis interface, select the project path and click the "Auto-Import Files" button to import molecular network data, annotation result data, and metabolomics data. Here, multiple dimensions of data can be fused into the FMN network for visual analysis
 
-![](assets/manual/img_0058.png)
+![](assets/manual/img_0070.png)
 
 Right click on each node to view information about a single node
 
-![](assets/manual/img_0059.png)
+![](assets/manual/img_0071.png)
+
+Remember to export all result files (molecular network, mass spectrometry annotation results, and related parameters); After exporting the results, the data in the project folder should be as shown in the following figure.
+
+![](assets/manual/img_0072.png)

@@ -22,7 +22,7 @@ Left panel: Project path, feature table folder, batch analysis parameters, Data 
 
 Right panel: Three result views (Batch / Single Sample / Single Compound), chart and table display.
 
-![](assets/manual/img_0001.png)
+![](assets/manual/img_0002.png)
 
 ### Workflow
 
@@ -81,7 +81,7 @@ Statistical Analysis
 
 • Manage Reaction Types: Use Manage Reaction Types to view and enable/disable predefined reaction types (single- or multi-step). Prediction uses only enabled types.
 
-![](assets/manual/img_0002.png)
+![](assets/manual/img_0003.png)
 
 • Match Threshold: Mass/time tolerance for matching (default 0.02).
 
@@ -219,7 +219,7 @@ Left panel: Input Data (mass spectrum file, acquisition mode, Load Mass Spectrum
 
 Right panel: Sub-tabs — Spectrum Data (spectrum table and selected spectrum info), Identification Results (Basic) (basic search results table), Identification Results (AI search results table with structure view), Filtered Spectra (spectra after filters), Final Result Table (consolidated results). Export and copy options where applicable.
 
-![](assets/manual/img_0003.png)
+![](assets/manual/img_0004.png)
 
 ### Workflow
 
@@ -231,11 +231,11 @@ Right panel: Sub-tabs — Spectrum Data (spectrum table and selected spectrum in
 
 • Click Load Mass Spectrum File. The spectrum list appears in the Spectrum Data sub-tab.
 
-![](assets/manual/img_0004.png)
+![](assets/manual/img_0005.png)
 
 #### ② (Optional) Basic Search
 
-![](assets/manual/img_0005.png)
+![](assets/manual/img_0006.png)
 
 • In Basic Search Method, set Database (MGF) to your MGF database path (e.g. Database/ALL_GNPS_positive.mgf or negative).
 
@@ -254,7 +254,7 @@ Right panel: Sub-tabs — Spectrum Data (spectrum table and selected spectrum in
 
 #### ③ Load AI database and set AI Search parameters
 
-![](assets/manual/img_0006.png)
+![](assets/manual/img_0007.png)
 
 • In AI Search Method, set Database to your NPZ fingerprint file (e.g. Database/MSFPDB.npz).
 
@@ -288,7 +288,7 @@ Right panel: Sub-tabs — Spectrum Data (spectrum table and selected spectrum in
 
 • Click Filter Spectra to restrict the loaded spectra; filtered list appears in Filtered Spectra sub-tab. Click Clear Filter to restore the full list.
 
-![](assets/manual/img_0007.png)
+![](assets/manual/img_0008.png)
 
 #### ⑤ Result views
 
@@ -298,23 +298,23 @@ Identification Results (Basic)
 
 • Table of basic search hits: spectrum index, candidate compound, similarity, m/z, etc. Select a row to view details or structure if available. Click a row to view structure and spectrum comparison, After manual confirmation, click the green Add button after each line to add the results to the final annotation result:
 
-![](assets/manual/img_0008.png)
+![](assets/manual/img_0009.png)
 
 Identification Results (AI)
 
 • Table of AI search hits: columns such as rank, compound name, SMILES, formula, molecular weight, experimental/theoretical m/z, m/z diff, DNN similarity, After manual confirmation, click the green Add button after each line to add the results to the final annotation result.
 
-![](assets/manual/img_0009.png)
+![](assets/manual/img_0010.png)
 
 • Double click on each row to view the MS/MS spectrum attribution and predict the parts of the structure that are prone to neutral loss:
 
-![](assets/manual/img_0010.png)
+![](assets/manual/img_0011.png)
 
 Filtered Spectra
 
 • Spectra that remain after applying Spectra Filters.
 
-![](assets/manual/img_0011.png)
+![](assets/manual/img_0012.png)
 
 #### ⑥ Output and export
 
@@ -378,7 +378,7 @@ Left panel: Experiment Path Setting (Single Experiment Path), MS/MS Data Input (
 
 Right panel: Select Network Component dropdown, molecular weight search, Network Visualization (interactive graph), Plot Parameters (General: layout, iterations, figure size; Node: size, color, labels; Edge: width, color), Component Table (network statistics per component). Click nodes to view spectrum info and AI search candidates.
 
-![](assets/manual/img_0012.png)
+![](assets/manual/img_0013.png)
 
 ### Workflow
 
@@ -386,7 +386,7 @@ Right panel: Select Network Component dropdown, molecular weight search, Network
 
 • In Experiment Path Setting, click Select Single Experiment Path and choose the folder where results (molecular_network.xgmml, network_components.csv, etc.) will be saved.
 
-![](assets/manual/img_0013.png)
+![](assets/manual/img_0014.png)
 
 #### ② Set MGF file
 
@@ -394,7 +394,7 @@ Right panel: Select Network Component dropdown, molecular weight search, Network
 
 • The MGF path is used when you start the analysis; spectra are filtered, normalized, and used to build the network.
 
-![](assets/manual/img_0014.png)
+![](assets/manual/img_0015.png)
 
 #### ③ (Optional) Configure filters
 
@@ -402,7 +402,7 @@ Right panel: Select Network Component dropdown, molecular weight search, Network
 
 • Reactant Filter: Set Reactant MGF File to an MGF of reactant spectra. Set RT Tolerance (min), MZ Tolerance (Da), and Cosine Threshold. Spectra matching reactants (by RT, m/z, and cosine similarity) are excluded. Check Enable Reactant Filter to apply.
 
-![](assets/manual/img_0015.png)
+![](assets/manual/img_0016.png)
 
 #### ④ Set analysis parameters
 
@@ -418,7 +418,7 @@ Right panel: Select Network Component dropdown, molecular weight search, Network
 
 • Click Start Network Analysis. Analysis runs in the background; use Stop Analysis to interrupt. Progress and log appear at the bottom of the left panel.
 
-![](assets/manual/img_0016.png)
+![](assets/manual/img_0017.png)
 
 Analysis Parameters (non-fusion)
 
@@ -556,7 +556,7 @@ Left panel: Experiment Folder Import (Experiment Folder, Auto-Import Files, impo
 
 Right panel: Sub-tabs — Network Visualization (Select Network Component, Search m/z, interactive network graph, Plot Parameters: General/Node/Edge), All Networks (plot all components), Heatmap (metabolomics integration), and other visualization tabs. Click nodes to view spectrum, structure, and box plot in popup or side panel.
 
-![](assets/manual/img_0017.png)
+![](assets/manual/img_0018.png)
 
 ### Workflow
 
@@ -568,7 +568,7 @@ Option A — Auto-Import:
 
 • Click Auto-Import Files. The tool scans for network_edges.csv, network_nodes.csv, network_components.csv, MGF, DNN fingerprints, feature table, metabolomics results, AI search results, filtered spectra info, and pie chart data. Found files are filled into the corresponding input fields. If network files are found, Import Network may run automatically.
 
-![](assets/manual/img_0018.png)
+![](assets/manual/img_0019.png)
 
 Option B — Manual Import:
 
@@ -596,11 +596,11 @@ Option B — Manual Import:
 
 • Reactant Import: Set Reactant MGF File (raw material spectra) and click Load Reactant MGF Data. Set RT Tolerance (min), MZ Tolerance (Da), Min Cosine Similarity, Reaction MW Tolerance (Da). Use Manage Reaction Types to configure reaction types.
 
-![](assets/manual/img_0019.png)
+![](assets/manual/img_0020.png)
 
 •Reaction Visualization: Choose Similarity Method (cosine, neutral_loss, spec2vec, dnn_fingerprint, Transformer_DNN, or fusion). For DNN methods, set DNN Model Path. Set Similarity Threshold and Spectral Similarity Threshold (2nd round). For fusion, set per-method thresholds. Configure Reactant Annotation Strategy (Limit Strategy: Round 1/2 limits; Priority Strategy). Click Generate Reaction Visualization to build the reaction-annotated network.
 
-![](assets/manual/img_0020.png)
+![](assets/manual/img_0021.png)
 
 Reaction Visualization Parameters
 
@@ -626,7 +626,7 @@ Network Visualization tab
 
 • Interactive graph: Nodes represent spectra/compounds; edges represent spectral similarity (color-coded by edge type: cosine, neutral_loss, dnn, transformer_dnn). Nodes can be dragged to reposition.
 
-![](assets/manual/img_0021.png)
+![](assets/manual/img_0022.png)
 
 • Mouse actions: Left-click and drag to move a node. Right-click a node to open the Node Information dialog . Opens a modal dialog with two sub-tabs:
 
@@ -634,21 +634,21 @@ Network Visualization tab
 
 - Node & Reactant Details & Spectrum Comparison: Node info table (Node ID, precursor m/z, RT, MS/MS peaks count, ion type, Is Reactant). Matched Reactant info table (if node matches a reactant: m/z, RT, peaks count, cosine similarity). MS/MS spectrum comparison (node vs connected reactants; mirror spectrum when AI search available). Click a candidate to show structure comparison.
 
-![](assets/manual/img_0022.png)
+![](assets/manual/img_0023.png)
 
 • Plot Parameters (collapsible, with General / Node / Edge categories):
 
 - General: Layout algorithm (spring, circular, random, shell, kamada_kawai, spectral), iterations, K (spacing), figure width/height, DPI, Auto Fit to Frame, Margin Factor, Equal Aspect. Show All Networks in One View (display all components in a grid). Show Node Names (use feature table labels instead of m/z).
 
-![](assets/manual/img_0023.png)
+![](assets/manual/img_0024.png)
 
 - Node: Node size, alpha, font size, Node Size Based on Intensity (Group 1/2 for metabolomics-based scaling), border width, Show Labels, Auto Node Size, Reactant marker size, Reaction marker size. Pie Chart Colors (Group1/Group2). Node Color (default when no metabolomics).
 
-![](assets/manual/img_0024.png)
+![](assets/manual/img_0025.png)
 
 - Edge: Edge alpha, min/max edge width. Edge colors by type (Cosine, Neutral Loss, DNN, Transformer DNN).
 
-![](assets/manual/img_0025.png)
+![](assets/manual/img_0026.png)
 
 • Controls: Redraw Network, Reset Parameters, Export Network (XGMML or GraphML for Cytoscape).
 
@@ -658,11 +658,11 @@ Embedding Analysis tab
 
 • Show Fingerprint Meanings: Displays meanings of the 881-dimensional Pubchem fingerprint features.
 
-![](assets/manual/img_0026.png)
+![](assets/manual/img_0027.png)
 
 • Heatmap: DNN fingerprint heatmap for the selected component. Controls: Show Axis Labels, Size (Small/Medium/Large/Extra Large), Color (viridis, plasma, inferno, magma, coolwarm, RdYlBu), Redraw Heatmap.
 
-![](assets/manual/img_0027.png)
+![](assets/manual/img_0028.png)
 
 • Requires: DNN Fingerprints loaded (e.g. Transformer_DNN_Fingerprints.csv).
 
@@ -670,7 +670,7 @@ Reaction Visualization tab
 
 • Displays the reaction-annotated network (after Generate Reaction Visualization). Same layout and interaction as Network Visualization, but with reactant nodes, product nodes, and reaction-annotated edges (solid = reaction-matched, dashed = second-round spectral similarity).
 
-![](assets/manual/img_0028.png)
+![](assets/manual/img_0029.png)
 
 • Plot Parameters and controls similar to Network Visualization. Export options for reaction network.
 
@@ -678,35 +678,35 @@ Reaction Details tab
 
 • Reaction Details table: Component ID, Reactant Node, Product Node, Reactant m/z, Product m/z, Reactant RT, Product RT, MW Delta, Reaction Type. Sortable and exportable.
 
-![](assets/manual/img_0029.png)
+![](assets/manual/img_0030.png)
 
 • Reaction Type Statistics and chart views: Use the switch buttons above the chart area to toggle between six visualization modes:
 
 (1) Reaction Type Statistics (default): Bar chart showing the count of each reaction type. X-axis: functional group names (mapped from reaction types in Manage Reaction Types, e.g. Glycosylation, Methylation). Y-axis: number of product-reactant pairs. When using Fusion method: stacked bar chart with segments colored by similarity method (cosine, neutral_loss, dnn, transformer_dnn); each segment shows how many connections were found by that method. When using a single method (cosine, neutral_loss, etc.): simple bar chart with one color. Total count is displayed above each bar. Buttons: Export Image (PNG/SVG/PDF), Export Full Data (Stacked) (CSV with reaction type, functional group, and per-method counts).
 
-![](assets/manual/img_0030.png)
+![](assets/manual/img_0031.png)
 
 (2) Retention Time Timeline: Scatter or timeline plot of product-reactant pairs along the retention time axis. Filter Reaction Types: multi-select list to include only selected reaction types; Select All, Clear, Apply Filter. Show Legend button. Export Image.
 
-![](assets/manual/img_0031.png)
+![](assets/manual/img_0032.png)
 
 (3) Filter Results Pie Chart: Pie chart of filter results statistics (e.g. distribution of spectra or features that passed filters). Export Image, Export Data.
 
-![](assets/manual/img_0032.png)
+![](assets/manual/img_0033.png)
 
 (4) Product Intensity Ranking: Bar chart of TOP N reaction products ranked by intensity (from metabolomics/feature table). TOP N spinbox (default 30) controls how many products to display. Export Image, Export Data. Requires metabolomics data.
 
-![](assets/manual/img_0033.png)
+![](assets/manual/img_0034.png)
 
 (5) Reactant Intensity Ranking: Bar chart of TOP N reactants ranked by intensity. TOP N spinbox (default 30). Export Image, Export Data. Requires metabolomics data.
 
-![](assets/manual/img_0034.png)
+![](assets/manual/img_0035.png)
 
 (6) Product-Reactant Network Graph: Network graph of products and reactants. TOP N spinbox (default 30) limits displayed nodes. Plot Mode: "Products in Center (Default)" (TOP N products in center, reactants around) or "TOP30 Reactants in Center" (reactants in center, products outside). Export options for the network figure.
 
-![](assets/manual/img_0035.png)
-
 ![](assets/manual/img_0036.png)
+
+![](assets/manual/img_0037.png)
 
 • Requires: Reaction Visualization completed.
 
@@ -716,15 +716,15 @@ Batch Experiments Visualization tab
 
 • Analyze Experiments: Scans project folder, matches reaction products across experiments, and prepares comparison data.
 
-![](assets/manual/img_0037.png)
+![](assets/manual/img_0038.png)
 
 • View modes: Stacked Bar Chart (reaction product count or intensity by experiment), Heatmap for Reaction Products (intensity heatmap by experiment and product), Heatmap for Reactants (In body) (reactant intensity heatmap).
 
-![](assets/manual/img_0038.png)
+![](assets/manual/img_0039.png)
 
 • Heatmap Parameters: Group Selection (mean_group1, mean_group2), RT tolerance, m/z tolerance, figure width/height. Analyze Heatmap, Redraw Heatmap.
 
-![](assets/manual/img_0039.png)
+![](assets/manual/img_0040.png)
 
 • Requires: Pie Chart Data or batch experiment structure (folder per experiment with network_nodes.csv and FeatureTable.csv).
 
@@ -804,7 +804,7 @@ Left panel: Input Files (Input CSV File, Output NPZ File, Browse buttons), Contr
 
 Right panel: Generation Results (log text area showing validation and processing messages, results table with columns: Index, SMILES, Formula, Exact Mass, Embedding, Adducts). The table may display a summary of processed compounds when available.
 
-![](assets/manual/img_0040.png)
+![](assets/manual/img_0041.png)
 
 ### Workflow
 
