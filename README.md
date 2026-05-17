@@ -1,73 +1,103 @@
-# Manual.docx 网站生成
+# MSmaster
 
-本目录提供一个脚本：把 `Manual.docx` 自动转换成 `mkdocs` 可直接发布的文档网站（包含章节页、目录页，并尽量抽取图片）。
+**MSmaster** is an integrated metabolomics analysis platform for a *traceable*, evidence-oriented workflow—from differential/statistical analysis and MS/MS spectral identification to molecular networking, with optional advanced modules such as **Fusion Molecular Networks (FMN)** and **Metabolic Reaction Fusion Molecular Networks (MR-FMN)**.
 
-**线上地址：** [https://houzigegege.github.io/MSmaster-docs-users/](https://houzigegege.github.io/MSmaster-docs-users/)
-
-## 生成
-
-在项目根目录（本 README 所在目录）运行：
-
-```powershell
-python scripts/generate_manual_site.py --clean-manual
-```
-
-生成后会得到：
-
-- `docs/manual/`：自动生成的 markdown 页面和图片资源
-- `mkdocs.yml`：默认不会被脚本覆盖（建议你手工维护导航）
-
-> 不要手改 `docs/manual/` 里的内容；下次运行 `--clean-manual` 会被覆盖。首页、样式等请改 `docs/index.md`、`overrides.css` 等。
-
-## 预览（可选）
-
-```powershell
-python -m mkdocs serve
-```
-
-用浏览器打开终端里提示的本地地址，确认章节与图片无误后再发布。
-
-本地仅构建、不上传时：
-
-```powershell
-python -m mkdocs build
-```
-
-构建产物在 `site/` 目录（GitHub Pages 由 Actions 自动构建，一般不必手动上传 `site/`）。
+| | |
+|---|---|
+| **Documentation** | [Scientific Usage Guide](https://houzigegege.github.io/MSmaster-docs-users/) |
+| **Download** | [Releases](https://github.com/houzigegege/MSmaster-docs-users/releases) |
+| **Issues** | [GitHub Issues](https://github.com/houzigegege/MSmaster-docs-users/issues) |
 
 ---
 
-## 更新 Manual.docx 后，如何重新发布到线上
+## Overview
 
-每次改完 Word 手册并希望 [https://houzigegege.github.io/MSmaster-docs-users/](https://houzigegege.github.io/MSmaster-docs-users/) 同步更新时，按下面做即可。
+MSmaster is designed for researchers who need a coherent pipeline in untargeted / LC–MS–based metabolomics:
 
-### 1. 保存 Word 并重新生成网页内容
+- **Differential & statistical analysis** on feature tables  
+- **MS/MS spectral identification** with traceable parameters and outputs  
+- **Molecular networking** for structural context and hypothesis generation  
+- **Optional workflows** including embedding-based views and reaction-related network analysis (FMN, MR-FMN)
 
-1. 将更新后的 **`Manual.docx`** 放在项目根目录（覆盖旧文件）。
-2. 在项目根目录打开 PowerShell，执行：
+The platform emphasizes **reproducibility**, **parameter transparency**, and **interpretable exports** suitable for supplementary materials and follow-up validation.
 
-   ```powershell
-   cd "D:\1_DATA\博士后资料\18 MSMaster\05 website"
-   python scripts/generate_manual_site.py --clean-manual
-   ```
+![MSmaster workflow overview](docs/Figures/figure%201.png)
 
-### 2. 用 GitHub Desktop 推到 GitHub
+*Figure 1. Overview of the MSmaster workflow (see the Usage Guide for details).*
 
-1. 打开 **GitHub Desktop**，选中本仓库 **`MSmaster-docs-users`**。
-2. 左侧 **Changes** 中应出现 `docs/manual/` 等变更。
-3. 左下角 **Summary** 填写说明（例如 `update manual from Manual.docx`）。
-4. 点击 **Commit to main**，再点击 **Push origin**（或 **Fetch origin** 旁的推送按钮）。
+---
 
-### 3. 等待自动部署完成
+## Quick start
 
-1. 浏览器打开仓库：**https://github.com/houzigegege/MSmaster-docs-users**
-2. 进入 **Actions**，等待 **Deploy MkDocs to GitHub Pages** 出现 **绿色勾**（通常 1～3 分钟）。
-3. 部署成功后，刷新线上站点：  
-   **https://houzigegege.github.io/MSmaster-docs-users/**  
-   （若未立刻更新，可等 1～2 分钟或强制刷新浏览器缓存。）
+1. **Install** — Download the Windows package from **[Releases](https://github.com/houzigegege/MSmaster-docs-users/releases)** (see system requirements below). Extract locally and launch the application.  
+2. **Read the guide** — Open the **[Scientific Usage Guide](https://houzigegege.github.io/MSmaster-docs-users/)** and follow the recommended reading order:  
+   - [About MSmaster](https://houzigegege.github.io/MSmaster-docs-users/manual/section_01/)  
+   - [Install MSmaster](https://houzigegege.github.io/MSmaster-docs-users/manual/section_02/)  
+   - [MSmaster modules](https://houzigegege.github.io/MSmaster-docs-users/manual/section_03/)  
+   - [Quick Start](https://houzigegege.github.io/MSmaster-docs-users/manual/section_04/)  
+3. **Run an analysis** — Choose a workflow by input type (see Quick Start) and export results for downstream validation.
 
-### 说明
+---
 
-- 线上网站由 **GitHub Actions** 根据 `main` 分支自动构建，无需把 `site/` 文件夹手动上传到 GitHub。
-- 若还修改了 **`mkdocs.yml`**（例如 `site_url`、导航），同样需要 **Commit + Push** 后才会生效。
-- 仓库需为 **Public**，且 **Settings → Pages** 已选择 **`gh-pages`** 分支、`/(root)`（首次部署时配置一次即可）。
+## System requirements
+
+| Item | Recommendation |
+|------|----------------|
+| **OS** | Windows 10 / 11 (64-bit) |
+| **RAM** | 8 GB minimum; **16 GB+** recommended |
+| **Disk** | ~2 GB free for install and working files |
+| **Installer size** | ~1.0 GB (see Releases) |
+
+---
+
+## Documentation map
+
+The full manual is published as a static site (MkDocs Material):
+
+| Chapter | Topic |
+|---------|--------|
+| About MSmaster | Scope, outputs, intended use |
+| Install MSmaster | Download, setup, first launch |
+| MSmaster modules | UI and core workflows |
+| Quick Start | Start by input type |
+| FMN | Fusion Molecular Networks |
+| MR-FMN | Metabolic Reaction Fusion Molecular Networks |
+
+Source manuscript: `Manual.docx` in this repository (converted to `docs/manual/` for the website).
+
+---
+
+## Important notice
+
+Identification and networking results are **computational predictions**. For research use, conclusions should be supported by independent validation (e.g., authentic standards, confirmatory MS/MS, database/literature cross-checks, and experimental verification in your system).
+
+---
+
+## This repository
+
+**`MSmaster-docs-users`** hosts:
+
+- The **Scientific Usage Guide** (built with [MkDocs](https://www.mkdocs.org/) + [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/))  
+- **`Manual.docx`** and generated chapter pages under `docs/manual/`  
+- **GitHub Actions** deployment to GitHub Pages  
+- **Release assets** for the Windows installer (large files are **not** stored in Git history)
+
+Maintainers: see **[WEBSITE.md](WEBSITE.md)** for regenerating the site from Word, publishing updates, and creating Releases.
+
+---
+
+## Citation
+
+If you use MSmaster in published work, please cite the software and the analysis parameters you used. *(Add your preferred citation text here, e.g., manuscript DOI or Zenodo record.)*
+
+---
+
+## License
+
+*(Add license information here, e.g., MIT, proprietary academic use, etc.)*
+
+---
+
+## Contact
+
+*(Add contact email, lab page, or issue tracker link as appropriate.)*
