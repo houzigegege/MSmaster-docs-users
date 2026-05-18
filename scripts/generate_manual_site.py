@@ -249,25 +249,46 @@ def main() -> None:
         p = Page(title=clean, filename=filename, lines=[f"# {clean}", ""])
         return p
 
+    # Keep in sync with GitHub Releases (update version tag/filename when publishing a new release).
+    _release_tag = "v1.0.0"
+    _installer_name = "MS_Master_Professional.7z"
+    _release_page = (
+        "https://github.com/houzigegege/MSmaster-docs-users/releases/tag/" + _release_tag
+    )
+    _download_url = (
+        "https://github.com/houzigegege/MSmaster-docs-users/releases/download/"
+        + _release_tag
+        + "/"
+        + _installer_name
+    )
     install_download_block = "\n".join(
         [
             "## Windows installer",
             "",
-            "Download the Windows installer package (choose one):",
+            f"**Current release:** [{_release_tag}]({_release_page})",
             "",
-            "### Option 1 (Site-hosted)",
+            "| Item | Details |",
+            "|------|---------|",
+            f"| **Version** | {_release_tag} |",
+            "| **Platform** | Windows 10 / 11 (64-bit) |",
+            f"| **Package** | `{_installer_name}` (~1.0 GB) |",
             "",
-            '<a href="/install/MS_Master_Professional.7z">MS_Master_Professional.7z (bundled with the site)</a>',
+            "### Download",
             "",
-            "### Option 2 (Remote download)",
+            f"- **Direct download:** [{_installer_name}]({_download_url})",
+            f"- **Release notes & assets:** [GitHub Release {_release_tag}]({_release_page})",
             "",
-            '<a href="PASTE_REMOTE_URL_HERE">MS_Master_Professional.7z (remote)</a>',
+            "### Install steps",
             "",
-            "Remote URL should be replaced with your actual HTTP/HTTPS download link.",
+            f"1. Download `{_installer_name}` using the link above.",
+            "2. Extract the archive to a local folder (e.g. `C:\\MSmaster\\`).",
+            "3. Run `MSmaster.exe` (or the main launcher in the extracted folder).",
+            "4. For workflows and parameters, see the "
+            "[Scientific Usage Guide](https://houzigegege.github.io/MSmaster-docs-users/).",
             "",
-            "This file is expected to be available under the site root at:",
-            "",
-            "`/install/MS_Master_Professional.7z`",
+            "!!! note",
+            "    If download is slow in your region, try the Releases page in a browser with "
+            "stable connectivity, or check this chapter later for mirror links.",
             "",
         ]
     )
@@ -308,6 +329,32 @@ def main() -> None:
         ]
     )
 
+    def _strip_install_download_block(lines: List[str]) -> List[str]:
+        """Remove a previously injected Windows installer block before re-injecting."""
+        if not lines:
+            return lines
+        out = [lines[0]]
+        i = 1
+        in_block = False
+        while i < len(lines):
+            line = lines[i]
+            if line.strip() == "## Windows installer":
+                in_block = True
+                i += 1
+                continue
+            if in_block:
+                if line.strip().startswith("![]") or line.strip().startswith("Please visit"):
+                    in_block = False
+                    out.append(line)
+                elif line.strip().startswith("## ") and line.strip() != "## Windows installer":
+                    in_block = False
+                    out.append(line)
+                i += 1
+                continue
+            out.append(line)
+            i += 1
+        return out
+
     def maybe_inject_install_download(page: Page) -> None:
         """
         Ensure the Install section always contains the installer download link.
@@ -316,10 +363,7 @@ def main() -> None:
         is_install_section = "install" in (page.title or "").lower()
         if not is_install_section:
             return
-        md = "\n".join(page.lines)
-        if "MS_Master_Professional.7z" in md:
-            return
-        # Insert right after the first H1 heading line (page.lines[0])
+        page.lines = _strip_install_download_block(page.lines)
         insert_at = 1 if len(page.lines) > 1 else len(page.lines)
         page.lines[insert_at:insert_at] = [install_download_block, ""]
 

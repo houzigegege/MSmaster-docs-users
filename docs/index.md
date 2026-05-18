@@ -12,7 +12,8 @@ For a scientist audience, the navigation is intentionally kept minimal: each mai
       → (optional) metabolomics-statistics-driven filtering/interpretation, with advanced support such as embedding and reaction-related analysis.
     </p>
     <div class="hero-actions">
-      <a class="md-button md-button--primary" href="manual/section_04/">Quick Start</a>
+      <a class="md-button md-button--primary" href="https://github.com/houzigegege/MSmaster-docs-users/releases/download/v1.0.0/MS_Master_Professional.7z">Download v1.0.0</a>
+      <a class="md-button" href="manual/section_04/">Quick Start</a>
       <a class="md-button" href="manual/section_03/">Modules & Workflow</a>
     </div>
     <div class="hero-meta">
@@ -37,7 +38,7 @@ For a scientist audience, the navigation is intentionally kept minimal: each mai
   </a>
   <a href="manual/section_02/" class="card">
     <div class="card__title">Install MSmaster</div>
-    <div class="card__subtitle">Setup guidance (add your content in the docx)</div>
+    <div class="card__subtitle">Download v1.0.0 · setup & first launch</div>
   </a>
   <a href="manual/section_03/" class="card">
     <div class="card__title">MSmaster modules</div>

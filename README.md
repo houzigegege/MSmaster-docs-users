@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Documentation** | [Scientific Usage Guide](https://houzigegege.github.io/MSmaster-docs-users/) |
-| **Download** | [Releases](https://github.com/houzigegege/MSmaster-docs-users/releases) |
+| **Download** | [v1.0.0 — MS_Master_Professional.7z](https://github.com/houzigegege/MSmaster-docs-users/releases/download/v1.0.0/MS_Master_Professional.7z) · [All releases](https://github.com/houzigegege/MSmaster-docs-users/releases) |
 | **Issues** | [GitHub Issues](https://github.com/houzigegege/MSmaster-docs-users/issues) |
 
 ---

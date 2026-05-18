@@ -144,7 +144,7 @@ https://github.com/houzigegege/MSmaster-docs-users/releases/download/v1.0.0/MSma
 
 - **Version:** v1.0.0  
 - **Size:** ~1.0 GB  
-- **Windows:** [MSmaster-1.0.0-win64.zip](https://github.com/houzigegege/MSmaster-docs-users/releases/download/v1.0.0/MSmaster-1.0.0-win64.zip)
+- **Windows:** [MS_Master_Professional.7z](https://github.com/houzigegege/MSmaster-docs-users/releases/download/v1.0.0/MS_Master_Professional.7z)
 ```
 
 ### 发布新版本（例如 v1.0.1）
