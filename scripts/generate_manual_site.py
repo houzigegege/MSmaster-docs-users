@@ -256,9 +256,31 @@ def main() -> None:
     )
     install_download_block = "\n".join(
         [
+            "MSmaster for **Windows 10 / 11 (64-bit)**. You need about **1.0 GB** download "
+            "space and **~2 GB** free disk after extraction. **8 GB RAM** minimum; "
+            "**16 GB** recommended.",
+            "",
             "## Download",
             "",
             f"[MSmaster_V1.0.0.7z]({_download_url})",
+            "",
+            "## Installation",
+            "",
+            "1. Download `MSmaster_V1.0.0.7z` using the link above.",
+            "2. Extract the archive to a local folder (for example `C:\\MSmaster\\`).",
+            "3. Open the extracted folder and run **`MSmaster.exe`** (or the main launcher "
+            "shown in the folder).",
+            "4. On first launch, allow Windows to run the application if a security prompt "
+            "appears (only if you trust this release source).",
+            "5. For workflows, parameters, and result interpretation, continue with the "
+            "[Scientific Usage Guide](https://houzigegege.github.io/MSmaster-docs-users/) — "
+            "start from [Quick Start](https://houzigegege.github.io/MSmaster-docs-users/manual/section_04/) "
+            "if you are new to the platform.",
+            "",
+            "!!! note",
+            "    Identification and networking outputs are computational predictions. "
+            "Validate important findings with standards, confirmatory MS/MS, and appropriate "
+            "experimental controls.",
             "",
         ]
     )
@@ -300,32 +322,13 @@ def main() -> None:
     )
 
     def _strip_install_download_block(lines: List[str]) -> List[str]:
-        """Remove a previously injected Windows installer block before re-injecting."""
+        """Remove injected download/install text before re-injecting; keep screenshot onward."""
         if not lines:
             return lines
         out = [lines[0]]
-        i = 1
-        in_block = False
-        while i < len(lines):
-            line = lines[i]
-            if line.strip() in ("## Windows installer", "## Download"):
-                in_block = True
-                i += 1
-                continue
-            if in_block:
-                if line.strip().startswith("![]") or line.strip().startswith("Please visit"):
-                    in_block = False
-                    out.append(line)
-                elif line.strip().startswith("## ") and line.strip() not in (
-                    "## Windows installer",
-                    "## Download",
-                ):
-                    in_block = False
-                    out.append(line)
-                i += 1
-                continue
-            out.append(line)
-            i += 1
+        for i in range(1, len(lines)):
+            if lines[i].strip().startswith("![]"):
+                return out + lines[i:]
         return out
 
     def maybe_inject_install_download(page: Page) -> None:
