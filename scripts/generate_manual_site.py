@@ -249,46 +249,16 @@ def main() -> None:
         p = Page(title=clean, filename=filename, lines=[f"# {clean}", ""])
         return p
 
-    # Keep in sync with GitHub Releases (update version tag/filename when publishing a new release).
-    _release_tag = "v1.0.0"
-    _installer_name = "MS_Master_Professional.7z"
-    _release_page = (
-        "https://github.com/houzigegege/MSmaster-docs-users/releases/tag/" + _release_tag
-    )
+    # Keep in sync with GitHub Releases (update URL when publishing a new release).
     _download_url = (
         "https://github.com/houzigegege/MSmaster-docs-users/releases/download/"
-        + _release_tag
-        + "/"
-        + _installer_name
+        "v1.0.0/MSmaster_V1.0.0.7z"
     )
     install_download_block = "\n".join(
         [
-            "## Windows installer",
+            "## Download",
             "",
-            f"**Current release:** [{_release_tag}]({_release_page})",
-            "",
-            "| Item | Details |",
-            "|------|---------|",
-            f"| **Version** | {_release_tag} |",
-            "| **Platform** | Windows 10 / 11 (64-bit) |",
-            f"| **Package** | `{_installer_name}` (~1.0 GB) |",
-            "",
-            "### Download",
-            "",
-            f"- **Direct download:** [{_installer_name}]({_download_url})",
-            f"- **Release notes & assets:** [GitHub Release {_release_tag}]({_release_page})",
-            "",
-            "### Install steps",
-            "",
-            f"1. Download `{_installer_name}` using the link above.",
-            "2. Extract the archive to a local folder (e.g. `C:\\MSmaster\\`).",
-            "3. Run `MSmaster.exe` (or the main launcher in the extracted folder).",
-            "4. For workflows and parameters, see the "
-            "[Scientific Usage Guide](https://houzigegege.github.io/MSmaster-docs-users/).",
-            "",
-            "!!! note",
-            "    If download is slow in your region, try the Releases page in a browser with "
-            "stable connectivity, or check this chapter later for mirror links.",
+            f"[MSmaster_V1.0.0.7z]({_download_url})",
             "",
         ]
     )
@@ -338,7 +308,7 @@ def main() -> None:
         in_block = False
         while i < len(lines):
             line = lines[i]
-            if line.strip() == "## Windows installer":
+            if line.strip() in ("## Windows installer", "## Download"):
                 in_block = True
                 i += 1
                 continue
@@ -346,7 +316,10 @@ def main() -> None:
                 if line.strip().startswith("![]") or line.strip().startswith("Please visit"):
                     in_block = False
                     out.append(line)
-                elif line.strip().startswith("## ") and line.strip() != "## Windows installer":
+                elif line.strip().startswith("## ") and line.strip() not in (
+                    "## Windows installer",
+                    "## Download",
+                ):
                     in_block = False
                     out.append(line)
                 i += 1
