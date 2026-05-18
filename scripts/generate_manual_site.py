@@ -257,7 +257,7 @@ def main() -> None:
     install_download_block = "\n".join(
         [
             "MSmaster for **Windows 10 / 11 (64-bit)**. You need about **1.0 GB** download "
-            "space and **~2 GB** free disk after extraction. **8 GB RAM** minimum; "
+            "space and **4.3 GB** free disk after extraction. **8 GB RAM** minimum; "
             "**16 GB** recommended.",
             "",
             "## Download",

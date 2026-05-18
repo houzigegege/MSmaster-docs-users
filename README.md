@@ -45,7 +45,7 @@ The platform emphasizes **reproducibility**, **parameter transparency**, and **i
 |------|----------------|
 | **OS** | Windows 10 / 11 (64-bit) |
 | **RAM** | 8 GB minimum; **16 GB+** recommended |
-| **Disk** | ~2 GB free for install and working files |
+| **Disk** | 4.3 GB free after extraction (plus ~1.0 GB download) |
 | **Installer size** | ~1.0 GB (see Releases) |
 
 ---
