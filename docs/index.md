@@ -1,8 +1,8 @@
 # MSmaster Scientific Usage Guide
 
-**MSmaster** is an integrated metabolomics analysis platform for building **Fusion Molecular Networks (FMN)** and **Metabolic Reaction Fusion Molecular Networks (MR-FMN)**—within a *traceable* workflow from MS/MS input to exportable network evidence.
+**MSmaster** is an integrated metabolomics analysis platform centered on building **Fusion Molecular Networks (FMN)** and **Metabolic Reaction Fusion Molecular Networks (MR-FMN)**—within a *traceable* workflow from MS/MS input to exportable network evidence.
 
-For a scientist audience, navigation stays minimal: each main entry is a chapter auto-generated from `Manual.docx`. Supporting modules (identification, batch statistics, databases) feed the network workflows; the manual chapters below center on **how to establish FMN and MR-FMN**.
+The same tool also provides **auxiliary** capabilities for **MS/MS spectral annotation (identification)** and **metabolomics analysis** (e.g., batch differential/statistical workflows and feature-table–driven filters) that prepare, annotate, or constrain data before FMN/MR-FMN. For a scientist audience, navigation stays minimal: each main entry is a chapter auto-generated from `Manual.docx`.
 
 <div class="hero-banner hero-banner--fmn">
   <div class="hero-banner__inner">
@@ -11,6 +11,7 @@ For a scientist audience, navigation stays minimal: each main entry is a chapter
     <p>
       <strong>Fusion Molecular Networks (FMN)</strong> combine cosine, neutral-loss, and DNN-based edges in one hierarchical graph.
       <strong>MR-FMN</strong> extends an exported FMN with metabolic reaction annotation and expert-level verification—start FMN first, then import the project folder for reaction analysis.
+      <span class="hero-aside">Auxiliary:</span> MS/MS annotation and metabolomics modules support identification, feature tables, and filters upstream of the network workflows.
     </p>
     <div class="workflow-path" aria-label="Recommended network workflow">
       <span class="workflow-path__step workflow-path__step--active">FMN</span>
@@ -30,13 +31,15 @@ For a scientist audience, navigation stays minimal: each main entry is a chapter
       <span class="hero-pill">Traceable parameters</span>
       <span class="hero-pill">Exportable network evidence</span>
       <span class="hero-pill">Reaction-aware MR-FMN</span>
+      <span class="hero-pill hero-pill--aux">Auxiliary: MS/MS annotation</span>
+      <span class="hero-pill hero-pill--aux">Auxiliary: metabolomics analysis</span>
     </div>
   </div>
 </div>
 
 <figure class="home-figure">
   <img src="Figures/figure%201.png" alt="Figure 1 — MSmaster overview with FMN and MR-FMN as central outputs" loading="lazy" />
-  <figcaption class="home-figure__caption">Figure 1. MSmaster supports upstream metabolomics and identification steps; <strong>FMN</strong> and <strong>MR-FMN</strong> are the primary network outputs documented in this guide.</figcaption>
+  <figcaption class="home-figure__caption">Figure 1. <strong>FMN</strong> and <strong>MR-FMN</strong> are the primary network outputs; MS/MS annotation and metabolomics analysis are auxiliary modules that feed filters, labels, and evidence into those workflows (see Modules &amp; Quick Start).</figcaption>
 </figure>
 
 ## Core workflows (start here)
@@ -54,6 +57,28 @@ For a scientist audience, navigation stays minimal: each main entry is a chapter
   </a>
 </div>
 
+## Auxiliary analysis (MS annotation & metabolomics)
+
+These modules are **supporting** workflows—not substitutes for FMN/MR-FMN—but they are often used to identify spectra, build feature tables, or apply metabolomics filters before network construction.
+
+<div class="grid cards cards--aux" markdown>
+  <a href="manual/section_03/" class="card card--aux">
+    <div class="card__badge card__badge--aux">Auxiliary</div>
+    <div class="card__title">MS/MS spectral annotation</div>
+    <div class="card__subtitle">MS Identification, AI database search, and node-level annotation linked to Molecular Networks / FMN exports.</div>
+  </a>
+  <a href="manual/section_03/" class="card card--aux">
+    <div class="card__badge card__badge--aux">Auxiliary</div>
+    <div class="card__title">Metabolomics analysis</div>
+    <div class="card__subtitle">Batch metabolomics, differential/statistical outputs, and MetaboResult tables—usable in FMN metabolomics filters and downstream interpretation.</div>
+  </a>
+  <a href="manual/section_04/" class="card card--aux">
+    <div class="card__badge card__badge--aux">Auxiliary</div>
+    <div class="card__title">Quick Start (by input type)</div>
+    <div class="card__subtitle">Choose entry points for MGF-only, feature-table, or combined pipelines before opening the FMN chapter.</div>
+  </a>
+</div>
+
 ## Foundation chapters (install, modules, quick start)
 
 <div class="grid cards" markdown>
@@ -67,7 +92,7 @@ For a scientist audience, navigation stays minimal: each main entry is a chapter
   </a>
   <a href="manual/section_03/" class="card">
     <div class="card__title">MSmaster modules</div>
-    <div class="card__subtitle">Molecular Networks module and inputs for FMN</div>
+    <div class="card__subtitle">Full UI map: annotation, metabolomics, Molecular Networks, FMN inputs</div>
   </a>
   <a href="manual/section_04/" class="card">
     <div class="card__title">Quick Start</div>
@@ -82,7 +107,7 @@ For a scientist audience, navigation stays minimal: each main entry is a chapter
 ## Recommended reading order (FMN → MR-FMN)
 
 1. [Install MSmaster](manual/section_02.md) — download, extract, first launch
-2. [MSmaster modules](manual/section_03.md) — Molecular Networks UI and data paths used by FMN
+2. [MSmaster modules](manual/section_03.md) — auxiliary annotation & metabolomics modules, plus Molecular Networks / FMN inputs
 3. [Quick Start](manual/section_04.md) — inputs by data type (MGF, filters, project folder)
 4. **[Fusion Molecular Networks (FMN)](manual/section_05.md)** — build and export the fusion graph
 5. **[Metabolic Reaction Fusion Molecular Networks (MR-FMN)](manual/section_06.md)** — reaction analysis on exported FMN

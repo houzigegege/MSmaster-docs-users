@@ -1,5 +1,5 @@
 site_name: MSmaster — FMN & MR-FMN Guide
-site_description: Scientific usage guide for building Fusion Molecular Networks (FMN) and Metabolic Reaction Fusion Molecular Networks (MR-FMN) with MSmaster.
+site_description: Guide for FMN and MR-FMN with MSmaster, plus auxiliary MS/MS annotation and metabolomics analysis modules in a traceable workflow.
 # GitHub Pages 部署后请取消下一行注释并改成你的真实地址（搜索/站点地图需要）：
 # 项目仓库：https://<用户名>.github.io/<仓库名>/
 # 用户页仓库 <用户名>.github.io： https://<用户名>.github.io/

@@ -1,6 +1,6 @@
 # MSmaster
 
-**MSmaster** is an integrated metabolomics analysis platform for building **Fusion Molecular Networks (FMN)** and **Metabolic Reaction Fusion Molecular Networks (MR-FMN)** within a *traceable*, evidence-oriented workflow—from differential/statistical analysis and MS/MS identification through to exportable fusion networks and reaction-aware MR-FMN.
+**MSmaster** is an integrated metabolomics analysis platform centered on **Fusion Molecular Networks (FMN)** and **Metabolic Reaction Fusion Molecular Networks (MR-FMN)**, with *auxiliary* **MS/MS spectral annotation** and **metabolomics analysis** modules in the same *traceable*, evidence-oriented workflow.
 
 | | |
 |---|---|
@@ -14,11 +14,16 @@
 
 MSmaster is designed for researchers who need a coherent pipeline in untargeted / LC–MS–based metabolomics:
 
-- **Differential & statistical analysis** on feature tables  
-- **MS/MS spectral identification** with traceable parameters and outputs  
+**Primary network outputs**
+
 - **Fusion Molecular Networks (FMN)** — hierarchical fusion graph (cosine, neutral loss, DNN edges)  
 - **Metabolic Reaction Fusion Molecular Networks (MR-FMN)** — reaction annotation built on exported FMN  
-- **Supporting modules** — molecular networking, identification, batch statistics, and databases that feed FMN/MR-FMN
+
+**Auxiliary analysis (supporting FMN/MR-FMN)**
+
+- **MS/MS spectral annotation** — identification, AI database search, traceable parameters and exports  
+- **Metabolomics analysis** — batch workflows, differential/statistical analysis, feature tables and filters used before or alongside networking  
+- **Additional modules** — molecular networking UI, database generation, and advanced analysis views that connect to exported FMN data
 
 The platform emphasizes **reproducibility**, **parameter transparency**, and **interpretable exports** suitable for supplementary materials and follow-up validation.
 
