@@ -1,6 +1,6 @@
 # Home page video assets
 
-The home page (`docs/index.md`) includes a **video placeholder** until a workflow clip is ready.
+The home page (`docs/index.md`) embeds **`fmn-mrfmn-overview.mp4`** in the workflow overview section.
 
 ## Recommended clip
 
@@ -15,13 +15,11 @@ The home page (`docs/index.md`) includes a **video placeholder** until a workflo
 | `fmn-mrfmn-overview.mp4` | Embedded demo on the home page |
 | `fmn-mrfmn-poster.jpg` | Optional poster frame before play |
 
-## Enable on the home page
+## Update the clip
 
-1. Copy `fmn-mrfmn-overview.mp4` (and optional poster) into this folder (`docs/media/`).  
-2. In `docs/index.md`, inside the `home-video` block:  
-   - Remove or hide the `home-video__placeholder` div  
-   - Uncomment the `<video>...</video>` block  
-3. Run `python -m mkdocs serve` and confirm playback locally before pushing.
+1. Replace `fmn-mrfmn-overview.mp4` in this folder (keep the same filename, or update the `<source src="...">` in `docs/index.md`).  
+2. Optional: add `fmn-mrfmn-poster.jpg` and set `poster="media/fmn-mrfmn-poster.jpg"` on the `<video>` tag.  
+3. Run `python -m mkdocs serve` and confirm playback before pushing.
 
 ## Hosting large videos elsewhere
 

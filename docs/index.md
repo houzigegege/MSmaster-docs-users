@@ -65,20 +65,13 @@ hide:
 
 <div class="home-video" id="overview-video">
   <div class="home-video__frame">
-    <!-- Replace placeholder when ready: add docs/media/fmn-mrfmn-overview.mp4 (+ optional poster .jpg) -->
-    <div class="home-video__placeholder" role="img" aria-label="Video placeholder: FMN to MR-FMN workflow overview">
-      <span class="home-video__play" aria-hidden="true">▶</span>
-      <p class="home-video__title">Workflow overview (video coming soon)</p>
-      <p class="home-video__hint">~60 s screen capture: FMN build → export → MR-FMN import. Place file at <code>docs/media/fmn-mrfmn-overview.mp4</code> and uncomment the <code>&lt;video&gt;</code> block in <code>index.md</code>.</p>
-    </div>
-    <!--
-    <video class="home-video__player" controls preload="metadata" poster="media/fmn-mrfmn-poster.jpg">
+    <video class="home-video__player" controls preload="metadata" playsinline title="MSmaster workflow: FMN build, export, and MR-FMN import">
       <source src="media/fmn-mrfmn-overview.mp4" type="video/mp4" />
-      Your browser does not support embedded video. <a href="media/fmn-mrfmn-overview.mp4">Download the clip</a>.
+      Your browser does not support embedded video.
+      <a href="media/fmn-mrfmn-overview.mp4">Download the workflow overview (MP4)</a>.
     </video>
-    -->
   </div>
-  <p class="home-video__caption">Suggested demo: Molecular Networks FMN run, <strong>Export All Results</strong>, then Advanced Analysis MR-FMN import. See <a href="media/README.md">docs/media/README.md</a> for maintainer notes.</p>
+  <p class="home-video__caption">Workflow overview: FMN in Molecular Networks, <strong>Export All Results</strong>, then MR-FMN import in Advanced Analysis.</p>
 </div>
 
 <figure class="home-figure">
