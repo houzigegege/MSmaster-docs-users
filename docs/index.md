@@ -1,35 +1,60 @@
 # MSmaster Scientific Usage Guide
 
-`MSmaster` is an integrated metabolomics analysis platform designed for a *traceable* workflow.
+**MSmaster** is an integrated metabolomics analysis platform for building **Fusion Molecular Networks (FMN)** and **Metabolic Reaction Fusion Molecular Networks (MR-FMN)**—within a *traceable* workflow from MS/MS input to exportable network evidence.
 
-For a scientist audience, the navigation is intentionally kept minimal: each main entry corresponds to a chapter auto-generated from `Manual.docx`.
+For a scientist audience, navigation stays minimal: each main entry is a chapter auto-generated from `Manual.docx`. Supporting modules (identification, batch statistics, databases) feed the network workflows; the manual chapters below center on **how to establish FMN and MR-FMN**.
 
-<div class="hero-banner">
+<div class="hero-banner hero-banner--fmn">
   <div class="hero-banner__inner">
-    <h1>MSmaster Scientific Usage Guide</h1>
+    <p class="hero-eyebrow">Core deliverable</p>
+    <h1>Build FMN &amp; MR-FMN with MSmaster</h1>
     <p>
-      Differential/statistical analysis → MS/MS spectral identification → molecular networking
-      → (optional) metabolomics-statistics-driven filtering/interpretation, with advanced support such as embedding and reaction-related analysis.
+      <strong>Fusion Molecular Networks (FMN)</strong> combine cosine, neutral-loss, and DNN-based edges in one hierarchical graph.
+      <strong>MR-FMN</strong> extends an exported FMN with metabolic reaction annotation and expert-level verification—start FMN first, then import the project folder for reaction analysis.
     </p>
+    <div class="workflow-path" aria-label="Recommended network workflow">
+      <span class="workflow-path__step workflow-path__step--active">FMN</span>
+      <span class="workflow-path__arrow" aria-hidden="true">→</span>
+      <span class="workflow-path__step">Export results</span>
+      <span class="workflow-path__arrow" aria-hidden="true">→</span>
+      <span class="workflow-path__step workflow-path__step--active">MR-FMN</span>
+    </div>
     <div class="hero-actions">
-      <a class="md-button md-button--primary" href="https://github.com/houzigegege/MSmaster-docs-users/releases/download/v1.0.0/MSmaster_V1.0.0.7z">Download v1.0.0</a>
+      <a class="md-button md-button--primary" href="manual/section_05/">Fusion Molecular Networks (FMN)</a>
+      <a class="md-button md-button--primary" href="manual/section_06/">MR-FMN</a>
+      <a class="md-button" href="https://github.com/houzigegege/MSmaster-docs-users/releases/download/v1.0.0/MSmaster_V1.0.0.7z">Download v1.0.0</a>
       <a class="md-button" href="manual/section_04/">Quick Start</a>
-      <a class="md-button" href="manual/section_03/">Modules & Workflow</a>
     </div>
     <div class="hero-meta">
-      <span class="hero-pill">Reproducible</span>
-      <span class="hero-pill">Evidence-oriented</span>
-      <span class="hero-pill">Parameter-aware</span>
+      <span class="hero-pill">Hierarchical fusion graph</span>
+      <span class="hero-pill">Traceable parameters</span>
+      <span class="hero-pill">Exportable network evidence</span>
+      <span class="hero-pill">Reaction-aware MR-FMN</span>
     </div>
   </div>
 </div>
 
 <figure class="home-figure">
-  <img src="Figures/figure%201.png" alt="Figure 1 — MSmaster overview" loading="lazy" />
-  <figcaption class="home-figure__caption">Figure 1. Overview of the MSmaster workflow.</figcaption>
+  <img src="Figures/figure%201.png" alt="Figure 1 — MSmaster overview with FMN and MR-FMN as central outputs" loading="lazy" />
+  <figcaption class="home-figure__caption">Figure 1. MSmaster supports upstream metabolomics and identification steps; <strong>FMN</strong> and <strong>MR-FMN</strong> are the primary network outputs documented in this guide.</figcaption>
 </figure>
 
-## Choose your starting point (direct chapter access)
+## Core workflows (start here)
+
+<div class="grid cards cards--core" markdown>
+  <a href="manual/section_05/" class="card card--featured">
+    <div class="card__badge">Step 1</div>
+    <div class="card__title">Fusion Molecular Networks (FMN)</div>
+    <div class="card__subtitle">Unified graph: cosine → neutral loss → Standard DNN → Transformer DNN. Configure hierarchical fusion, run analysis, and export all results.</div>
+  </a>
+  <a href="manual/section_06/" class="card card--featured">
+    <div class="card__badge">Step 2</div>
+    <div class="card__title">Metabolic Reaction Fusion Molecular Networks (MR-FMN)</div>
+    <div class="card__subtitle">Requires completed FMN exports. Import the project folder, define reaction rules, annotate reactions, and verify predictions before export.</div>
+  </a>
+</div>
+
+## Foundation chapters (install, modules, quick start)
 
 <div class="grid cards" markdown>
   <a href="manual/section_01/" class="card">
@@ -38,36 +63,29 @@ For a scientist audience, the navigation is intentionally kept minimal: each mai
   </a>
   <a href="manual/section_02/" class="card">
     <div class="card__title">Install MSmaster</div>
-    <div class="card__subtitle">Download v1.0.0 · setup & first launch</div>
+    <div class="card__subtitle">Download v1.0.0 · setup &amp; first launch</div>
   </a>
   <a href="manual/section_03/" class="card">
     <div class="card__title">MSmaster modules</div>
-    <div class="card__subtitle">UI organization and core workflows</div>
+    <div class="card__subtitle">Molecular Networks module and inputs for FMN</div>
   </a>
   <a href="manual/section_04/" class="card">
     <div class="card__title">Quick Start</div>
-    <div class="card__subtitle">Start fast by input type</div>
-  </a>
-  <a href="manual/section_05/" class="card">
-    <div class="card__title">Fusion Molecular Networks (FMN)</div>
-    <div class="card__subtitle">FMN workflow and export</div>
-  </a>
-  <a href="manual/section_06/" class="card">
-    <div class="card__title">Metabolic Reaction Fusion Molecular Networks (MR-FMN)</div>
-    <div class="card__subtitle">MR-FMN workflow</div>
+    <div class="card__subtitle">Prepare MGF / project path before FMN</div>
   </a>
 </div>
 
 !!! warning
-    Identification and analysis results are *computational predictions*.
+    Identification and network results are *computational predictions*.
     For research use, conclusions still require independent validation within your experimental system (e.g., standards, confirmatory MS/MS evidence, literature/database cross-checking, and experimental verification).
 
-## Recommended “scientific reading order”
+## Recommended reading order (FMN → MR-FMN)
 
-If you want to interpret outputs in a defensible way, follow this reading order:
-
-1. [MSmaster modules](manual/section_03.md) — modules, workflow, where results come from
-2. [Quick Start](manual/section_04.md) — quick start by input type
-3. [Parameters & output interpretation](parameters.md)
-4. [Reproducibility & validation](reproducibility.md)
-5. [FAQ & troubleshooting](faq.md)
+1. [Install MSmaster](manual/section_02.md) — download, extract, first launch
+2. [MSmaster modules](manual/section_03.md) — Molecular Networks UI and data paths used by FMN
+3. [Quick Start](manual/section_04.md) — inputs by data type (MGF, filters, project folder)
+4. **[Fusion Molecular Networks (FMN)](manual/section_05.md)** — build and export the fusion graph
+5. **[Metabolic Reaction Fusion Molecular Networks (MR-FMN)](manual/section_06.md)** — reaction analysis on exported FMN
+6. [Parameters & output interpretation](parameters.md)
+7. [Reproducibility & validation](reproducibility.md)
+8. [FAQ & troubleshooting](faq.md)

@@ -1,6 +1,6 @@
 # MSmaster
 
-**MSmaster** is an integrated metabolomics analysis platform for a *traceable*, evidence-oriented workflow—from differential/statistical analysis and MS/MS spectral identification to molecular networking, with optional advanced modules such as **Fusion Molecular Networks (FMN)** and **Metabolic Reaction Fusion Molecular Networks (MR-FMN)**.
+**MSmaster** is an integrated metabolomics analysis platform for building **Fusion Molecular Networks (FMN)** and **Metabolic Reaction Fusion Molecular Networks (MR-FMN)** within a *traceable*, evidence-oriented workflow—from differential/statistical analysis and MS/MS identification through to exportable fusion networks and reaction-aware MR-FMN.
 
 | | |
 |---|---|
@@ -16,8 +16,9 @@ MSmaster is designed for researchers who need a coherent pipeline in untargeted 
 
 - **Differential & statistical analysis** on feature tables  
 - **MS/MS spectral identification** with traceable parameters and outputs  
-- **Molecular networking** for structural context and hypothesis generation  
-- **Optional workflows** including embedding-based views and reaction-related network analysis (FMN, MR-FMN)
+- **Fusion Molecular Networks (FMN)** — hierarchical fusion graph (cosine, neutral loss, DNN edges)  
+- **Metabolic Reaction Fusion Molecular Networks (MR-FMN)** — reaction annotation built on exported FMN  
+- **Supporting modules** — molecular networking, identification, batch statistics, and databases that feed FMN/MR-FMN
 
 The platform emphasizes **reproducibility**, **parameter transparency**, and **interpretable exports** suitable for supplementary materials and follow-up validation.
 
@@ -30,12 +31,8 @@ The platform emphasizes **reproducibility**, **parameter transparency**, and **i
 ## Quick start
 
 1. **Install** — Download the Windows package from **[Releases](https://github.com/houzigegege/MSmaster-docs-users/releases)** (see system requirements below). Extract locally and launch the application.  
-2. **Read the guide** — Open the **[Scientific Usage Guide](https://houzigegege.github.io/MSmaster-docs-users/)** and follow the recommended reading order:  
-   - [About MSmaster](https://houzigegege.github.io/MSmaster-docs-users/manual/section_01/)  
-   - [Install MSmaster](https://houzigegege.github.io/MSmaster-docs-users/manual/section_02/)  
-   - [MSmaster modules](https://houzigegege.github.io/MSmaster-docs-users/manual/section_03/)  
-   - [Quick Start](https://houzigegege.github.io/MSmaster-docs-users/manual/section_04/)  
-3. **Run an analysis** — Choose a workflow by input type (see Quick Start) and export results for downstream validation.
+2. **Read the guide** — Open the **[FMN & MR-FMN Guide](https://houzigegege.github.io/MSmaster-docs-users/)** and follow: Install → Modules → Quick Start → **[FMN](https://houzigegege.github.io/MSmaster-docs-users/manual/section_05/)** → **[MR-FMN](https://houzigegege.github.io/MSmaster-docs-users/manual/section_06/)**.  
+3. **Build networks** — Complete FMN in Molecular Networks, export all results, then run MR-FMN in Advanced Analysis on the exported project folder.
 
 ---
 

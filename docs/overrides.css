@@ -8,6 +8,55 @@
   border: 1px solid rgba(63, 81, 181, 0.25);
 }
 
+.hero-banner--fmn {
+  background:
+    linear-gradient(135deg, rgba(63, 81, 181, 0.2) 0%, rgba(63, 81, 181, 0.06) 55%, rgba(48, 63, 159, 0.04) 100%);
+  border-color: rgba(63, 81, 181, 0.35);
+}
+
+.hero-eyebrow {
+  margin: 0 0 0.35rem 0;
+  font-size: 0.8rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #3949ab;
+}
+
+[data-md-color-scheme="slate"] .hero-eyebrow {
+  color: #9fa8da;
+}
+
+.workflow-path {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.55rem;
+  margin: 0.75rem 0 1rem 0;
+}
+
+.workflow-path__step {
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--md-typeset-color-secondary);
+}
+
+.workflow-path__step--active {
+  border-color: rgba(63, 81, 181, 0.55);
+  background: rgba(63, 81, 181, 0.12);
+  color: var(--md-typeset-color);
+}
+
+.workflow-path__arrow {
+  font-weight: 700;
+  color: var(--md-typeset-color-secondary);
+  opacity: 0.75;
+}
+
 .hero-banner__inner {
   padding: 1.2rem 1.25rem;
 }
@@ -83,6 +132,42 @@
   color: var(--md-typeset-color-secondary);
   font-size: 0.9rem;
   line-height: 1.25rem;
+}
+
+.grid.cards--core {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-bottom: 0.5rem;
+}
+
+.grid.cards a.card--featured {
+  border-width: 2px;
+  border-color: rgba(63, 81, 181, 0.4);
+  background: linear-gradient(180deg, rgba(63, 81, 181, 0.07), var(--md-card-bg-color) 42%);
+}
+
+.grid.cards a.card--featured:hover {
+  border-color: rgba(63, 81, 181, 0.65);
+}
+
+.grid.cards .card__badge {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(63, 81, 181, 0.14);
+  color: #3949ab;
+}
+
+[data-md-color-scheme="slate"] .grid.cards .card__badge {
+  color: #c5cae9;
+}
+
+.grid.cards a.card--featured .card__subtitle {
+  line-height: 1.4;
 }
 
 /* Home page overview figure */
