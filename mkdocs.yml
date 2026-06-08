@@ -3,7 +3,7 @@ site_description: Guide for FMN and MR-FMN with MSmaster, plus auxiliary MS/MS a
 # GitHub Pages 部署后请取消下一行注释并改成你的真实地址（搜索/站点地图需要）：
 # 项目仓库：https://<用户名>.github.io/<仓库名>/
 # 用户页仓库 <用户名>.github.io： https://<用户名>.github.io/
-# site_url: https://username.github.io/repo-name/
+site_url: https://spectroai.github.io/MSmaster/
 
 theme:
   name: material

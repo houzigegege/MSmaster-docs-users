@@ -20,10 +20,10 @@ Spectral library matching against an MGF reference database in **MS Identificati
 
 <div class="home-video quick-start-video">
   <div class="home-video__frame">
-    <video class="home-video__player" controls preload="metadata" playsinline poster="../media/Lib-search-poster.jpg" title="MS/MS library search in MSmaster">
-      <source src="../media/Lib-search.mp4" type="video/mp4" />
+    <video class="home-video__player" controls preload="metadata" playsinline poster="../../media/Lib-search-poster.jpg" title="MS/MS library search in MSmaster">
+      <source src="../../media/Lib-search.mp4" type="video/mp4" />
       Your browser does not support embedded video.
-      <a href="../media/Lib-search.mp4">Download MS/MS library search demo (MP4)</a>.
+      <a href="../../media/Lib-search.mp4">Download MS/MS library search demo (MP4)</a>.
     </video>
   </div>
 </div>
@@ -34,10 +34,10 @@ AI fingerprint search against an NPZ database in **MS Identification** (AI Searc
 
 <div class="home-video quick-start-video">
   <div class="home-video__frame">
-    <video class="home-video__player" controls preload="metadata" playsinline poster="../media/AILib-Search-poster.jpg" title="AI molecular fingerprint database search in MSmaster">
-      <source src="../media/AILib-Search.mp4" type="video/mp4" />
+    <video class="home-video__player" controls preload="metadata" playsinline poster="../../media/AILib-Search-poster.jpg" title="AI molecular fingerprint database search in MSmaster">
+      <source src="../../media/AILib-Search.mp4" type="video/mp4" />
       Your browser does not support embedded video.
-      <a href="../media/AILib-Search.mp4">Download AI library search demo (MP4)</a>.
+      <a href="../../media/AILib-Search.mp4">Download AI library search demo (MP4)</a>.
     </video>
   </div>
 </div>
@@ -48,10 +48,10 @@ Build a molecular network in **Molecular Networks**, optionally run database sea
 
 <div class="home-video quick-start-video">
   <div class="home-video__frame">
-    <video class="home-video__player" controls preload="metadata" playsinline poster="../media/Molecular_network-poster.jpg" title="Molecular network construction with MS/MS annotation in MSmaster">
-      <source src="../media/Molecular_network.mp4" type="video/mp4" />
+    <video class="home-video__player" controls preload="metadata" playsinline poster="../../media/Molecular_network-poster.jpg" title="Molecular network construction with MS/MS annotation in MSmaster">
+      <source src="../../media/Molecular_network.mp4" type="video/mp4" />
       Your browser does not support embedded video.
-      <a href="../media/Molecular_network.mp4">Download molecular network demo (MP4)</a>.
+      <a href="../../media/Molecular_network.mp4">Download molecular network demo (MP4)</a>.
     </video>
   </div>
 </div>

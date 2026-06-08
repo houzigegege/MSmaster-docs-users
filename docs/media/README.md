@@ -2,7 +2,9 @@
 
 Embedded MP4 demos use a matching **poster** JPEG (shown before play). Posters are named `<video-basename>-poster.jpg` alongside each MP4 in this folder.
 
-## Current files
+## Paths in Markdown
+
+Pages under `docs/manual/` are built to `manual/<section>/index.html`. Media lives at `docs/media/` → site root `media/`. Use **`../../media/...`** in Quick Start (`section_04`), not `../media/` (that incorrectly points to `manual/media/`).
 
 | Video | Poster | Used on |
 |------|--------|---------|
