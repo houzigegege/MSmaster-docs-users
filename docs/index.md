@@ -65,7 +65,7 @@ hide:
 
 <div class="home-video" id="overview-video">
   <div class="home-video__frame">
-    <video class="home-video__player" controls preload="metadata" playsinline title="MSmaster workflow: FMN build, export, and MR-FMN import">
+    <video class="home-video__player" controls preload="metadata" playsinline poster="media/fmn-mrfmn-overview-poster.jpg" title="MSmaster workflow: FMN build, export, and MR-FMN import">
       <source src="media/fmn-mrfmn-overview.mp4" type="video/mp4" />
       Your browser does not support embedded video.
       <a href="media/fmn-mrfmn-overview.mp4">Download the workflow overview (MP4)</a>.

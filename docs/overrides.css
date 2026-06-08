@@ -353,6 +353,7 @@
   height: auto;
   aspect-ratio: 16 / 9;
   background: #000;
+  object-fit: contain;
 }
 
 .home-video__caption {
@@ -360,6 +361,19 @@
   font-size: 0.88rem;
   color: var(--md-typeset-color-secondary);
   text-align: center;
+}
+
+.quick-start-video {
+  margin: 0.75rem 0 1.75rem 0;
+}
+
+.quick-start-video .home-video__frame {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.quick-start-video + h3,
+h3 + .quick-start-video {
+  margin-top: 0.5rem;
 }
 
 /* Trust strip */

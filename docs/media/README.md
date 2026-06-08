@@ -1,26 +1,43 @@
-# Home page video assets
+# Video assets for the documentation site
 
-The home page (`docs/index.md`) embeds **`fmn-mrfmn-overview.mp4`** in the workflow overview section.
+Embedded MP4 demos use a matching **poster** JPEG (shown before play). Posters are named `<video-basename>-poster.jpg` alongside each MP4 in this folder.
 
-## Recommended clip
+## Current files
 
-- **Length:** ~30–60 seconds  
-- **Content:** FMN run in Molecular Networks → **Export All Results** → import project folder in Advanced Analysis → MR-FMN preview  
-- **Format:** MP4 (H.264), 1280×720 or 1920×1080, keep file **under ~15 MB** for GitHub Pages  
+| Video | Poster | Used on |
+|------|--------|---------|
+| `fmn-mrfmn-overview.mp4` | `fmn-mrfmn-overview-poster.jpg` | Home |
+| `Lib-search.mp4` | `Lib-search-poster.jpg` | Quick Start |
+| `AILib-Search.mp4` | `AILib-Search-poster.jpg` | Quick Start |
+| `Molecular_network.mp4` | `Molecular_network-poster.jpg` | Quick Start |
 
-## Files to add
+## Regenerate posters from video
 
-| File | Purpose |
-|------|---------|
-| `fmn-mrfmn-overview.mp4` | Embedded demo on the home page |
-| `fmn-mrfmn-poster.jpg` | Optional poster frame before play |
+After replacing an MP4, regenerate its cover frame (default: 1 s into the clip):
 
-## Update the clip
+```powershell
+pip install opencv-python-headless
+python scripts/extract_video_posters.py
+```
 
-1. Replace `fmn-mrfmn-overview.mp4` in this folder (keep the same filename, or update the `<source src="...">` in `docs/index.md`).  
-2. Optional: add `fmn-mrfmn-poster.jpg` and set `poster="media/fmn-mrfmn-poster.jpg"` on the `<video>` tag.  
-3. Run `python -m mkdocs serve` and confirm playback before pushing.
+Use a custom timestamp (milliseconds):
 
-## Hosting large videos elsewhere
+```powershell
+python scripts/extract_video_posters.py --time-ms 3000
+```
 
-If the file is too large for the repo, host on GitHub Release or a lab server and replace the `<source src="...">` URL with the direct link. Keep the placeholder caption updated with a “Watch demo” link.
+## Replace a poster manually
+
+1. Export a PNG/JPG from your editor or a video player screenshot.  
+2. Save as `<video-basename>-poster.jpg` in this folder (max width ~1280 px recommended).  
+3. No HTML changes needed if the filename matches the pattern above.
+
+## Update a video clip
+
+1. Replace the `.mp4` in this folder (keep the filename, or update `<source src="...">` and `poster="..."` in `docs/index.md` or `docs/templates/section_04_quick_start.md`).  
+2. Run `python scripts/extract_video_posters.py` to refresh the poster.  
+3. Preview with `python -m mkdocs serve` before pushing.
+
+## Large files
+
+Keep each MP4 **under ~50 MB** for GitHub. Host larger files on GitHub Releases and point `src` / `poster` to the release URL if needed.

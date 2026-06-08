@@ -355,6 +355,20 @@ def main() -> None:
         insert_at = 1 if len(page.lines) > 1 else len(page.lines)
         page.lines[insert_at:insert_at] = [about_license_affiliations_block, ""]
 
+    quick_start_template_path = os.path.join("docs", "templates", "section_04_quick_start.md")
+
+    def maybe_replace_quick_start(page: Page) -> None:
+        """
+        Quick Start is hand-maintained (table + embedded videos). Replace Word output
+        with docs/templates/section_04_quick_start.md when regenerating from Manual.docx.
+        """
+        if page.filename != "section_04.md":
+            return
+        if not os.path.isfile(quick_start_template_path):
+            return
+        with open(quick_start_template_path, encoding="utf-8") as f:
+            page.lines = f.read().splitlines()
+
     h1_count = 0
 
     # 迭代文档 block，尽量保持表格/图片顺序
@@ -452,6 +466,7 @@ def main() -> None:
             continue
         maybe_inject_install_download(p)
         maybe_inject_about_license(p)
+        maybe_replace_quick_start(p)
         out_path = os.path.join(manual_dir, p.filename)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write("\n".join(p.lines).strip() + "\n")
