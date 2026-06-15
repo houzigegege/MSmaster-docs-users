@@ -6,7 +6,7 @@ hide:
 <section class="hero-banner hero-banner--platform">
   <div class="hero-banner__inner">
     <p class="hero-eyebrow">Academic metabolomics software</p>
-    <h1>MSmaster</h1>
+    <h1 class="hero-wordmark"><span class="hero-wordmark__ms">MS</span><span class="hero-wordmark__master">master</span></h1>
     <p class="hero-tagline">
       A platform for fusion molecular networks, Metabolic reaction fusion molecular networks (MR-FMN), and traceable MS/MS evidence.
     </p>
