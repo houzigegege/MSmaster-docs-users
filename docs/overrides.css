@@ -608,17 +608,17 @@ table {
 
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-  height: 2.65rem;
+  height: 3.98rem;
   width: auto;
-  max-width: min(42vw, 15rem);
+  max-width: min(63vw, 22.5rem);
   object-fit: contain;
 }
 
 @media screen and (max-width: 76.2344em) {
   .md-header__button.md-logo img,
   .md-header__button.md-logo svg {
-    height: 2.25rem;
-    max-width: min(48vw, 12rem);
+    height: 3.38rem;
+    max-width: min(72vw, 18rem);
   }
 }
 
