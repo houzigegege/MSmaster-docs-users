@@ -8,7 +8,7 @@ hide:
     <p class="hero-eyebrow">Academic metabolomics software</p>
     <h1>MSmaster</h1>
     <p class="hero-tagline">
-      A platform for fusion molecular networks, reaction-aware annotation, and traceable MS/MS evidence.
+      A platform for fusion molecular networks, Metabolic reaction fusion molecular networks (MR-FMN), and traceable MS/MS evidence.
     </p>
     <p class="hero-lead">
       MSmaster integrates <strong>FMN</strong>, <strong>MR-FMN</strong>, MS/MS spectral annotation, and metabolomics analysis in a reproducible workflow for computational metabolomics research.
@@ -25,7 +25,7 @@ hide:
       </div>
       <div class="hero-metric">
         <span class="hero-metric__value">MR-FMN</span>
-        <span class="hero-metric__label">metabolic reaction annotation</span>
+        <span class="hero-metric__label">Metabolic reaction fusion molecular networks</span>
       </div>
       <div class="hero-metric">
         <span class="hero-metric__value">MS/MS</span>
@@ -53,7 +53,7 @@ hide:
   <div class="workflow-strip__arrow" aria-hidden="true">-></div>
   <div class="workflow-strip__item">
     <span class="workflow-strip__step">04</span>
-    <span class="workflow-strip__title">MR-FMN analysis</span>
+    <span class="workflow-strip__title">MR-FMN construction</span>
   </div>
 </section>
 
@@ -67,8 +67,8 @@ hide:
   </a>
   <a class="pillar" href="manual/section_06/">
     <div class="pillar__icon" aria-hidden="true">R</div>
-    <h3 class="pillar__title">Reaction-Aware Network Analysis</h3>
-    <p class="pillar__text">Run MR-FMN on exported FMN projects to annotate putative metabolic reaction relationships.</p>
+    <h3 class="pillar__title">Metabolic Reaction Fusion Molecular Networks</h3>
+    <p class="pillar__text">Run MR-FMN on exported FMN projects to construct metabolic reaction fusion molecular networks.</p>
   </a>
   <a class="pillar" href="manual/section_03/">
     <div class="pillar__icon" aria-hidden="true">A</div>
@@ -92,7 +92,7 @@ hide:
       <a href="media/fmn-mrfmn-overview.mp4">Download the workflow overview (MP4)</a>.
     </video>
   </div>
-  <p class="home-video__caption">Recommended sequence: build FMN in Molecular Networks, export all results, then import the project folder for MR-FMN analysis.</p>
+  <p class="home-video__caption">Recommended sequence: build FMN in Molecular Networks, export all results, then import the project folder for Metabolic reaction fusion molecular networks (MR-FMN).</p>
 </div>
 
 <figure class="home-figure">
@@ -110,8 +110,8 @@ hide:
   </a>
   <a href="manual/section_06/" class="card card--featured">
     <div class="card__badge">Core workflow</div>
-    <div class="card__title">MR-FMN Analysis</div>
-    <div class="card__subtitle">Import FMN outputs, apply reaction rules, inspect predictions, and export reaction-aware network results.</div>
+    <div class="card__title">Metabolic reaction fusion molecular networks (MR-FMN)</div>
+    <div class="card__subtitle">Import FMN outputs, apply reaction rules, inspect predictions, and export MR-FMN results.</div>
   </a>
 </div>
 

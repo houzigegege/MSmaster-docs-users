@@ -1,5 +1,5 @@
 site_name: MSmaster
-site_description: MSmaster is an academic metabolomics platform for FMN, MR-FMN, MS/MS annotation, and traceable molecular network analysis.
+site_description: MSmaster is an academic metabolomics platform for FMN, Metabolic reaction fusion molecular networks (MR-FMN), MS/MS annotation, and traceable molecular network analysis.
 # GitHub Pages 部署后请取消下一行注释并改成你的真实地址（搜索/站点地图需要）：
 # 项目仓库：https://<用户名>.github.io/<仓库名>/
 # 用户页仓库 <用户名>.github.io： https://<用户名>.github.io/
@@ -53,4 +53,4 @@ nav:
   - Capabilities: manual/section_03.md
   - Workflows: manual/section_04.md
   - FMN Analysis: manual/section_05.md
-  - MR-FMN Analysis: manual/section_06.md
+  - MR-FMN: manual/section_06.md

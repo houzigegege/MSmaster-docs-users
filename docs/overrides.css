@@ -5,6 +5,8 @@
   border-radius: 0.5rem;
   border: 1px solid rgba(34, 52, 96, 0.16);
   background: #f8fafc;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-banner--fmn,
@@ -13,6 +15,18 @@
     linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(244, 248, 252, 0.96) 52%, rgba(229, 246, 242, 0.88) 100%);
   border-color: rgba(32, 91, 115, 0.2);
   box-shadow: 0 18px 42px rgba(29, 48, 83, 0.12);
+}
+
+.hero-banner--platform::after {
+  content: "";
+  position: absolute;
+  top: -2.8rem;
+  right: -1.9rem;
+  width: min(42vw, 28rem);
+  aspect-ratio: 252.6 / 206.7;
+  background: url("Figures/hero-network-bg.svg") no-repeat center / contain;
+  opacity: 0.28;
+  pointer-events: none;
 }
 
 .hero-eyebrow {
@@ -59,6 +73,8 @@
 }
 
 .hero-banner__inner {
+  position: relative;
+  z-index: 1;
   padding: clamp(1.6rem, 4vw, 3rem);
 }
 
@@ -176,6 +192,10 @@
 }
 
 @media screen and (max-width: 44.9844em) {
+  .hero-banner--platform::after {
+    display: none;
+  }
+
   .workflow-strip {
     grid-template-columns: 1fr;
   }
