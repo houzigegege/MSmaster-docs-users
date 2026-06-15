@@ -602,14 +602,23 @@ table {
 .md-header__button.md-logo {
   /* First item in the header row — nudge left for “flush left” look */
   margin-inline-start: -0.15rem;
-  margin-inline-end: 0.15rem;
+  margin-inline-end: 0.55rem;
+  padding: 0.1rem;
 }
 
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-  height: 3rem;
+  height: 2.65rem;
   width: auto;
-  max-width: 260px;
+  max-width: min(42vw, 15rem);
   object-fit: contain;
+}
+
+@media screen and (max-width: 76.2344em) {
+  .md-header__button.md-logo img,
+  .md-header__button.md-logo svg {
+    height: 2.25rem;
+    max-width: min(48vw, 12rem);
+  }
 }
 

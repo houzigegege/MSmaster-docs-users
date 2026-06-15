@@ -8,8 +8,8 @@ site_url: https://spectroai.github.io/MSmaster/
 theme:
   name: material
   language: en
-  # Decorative icon in the top indigo header (source: docs/Figures/Figure 2.png)
-  logo: Figures/Figure 2.png
+  # MSmaster logo in the top header.
+  logo: Figures/msmaster-logo.png
   # Professional, publication-like contrast in both light/dark modes.
   palette:
     - scheme: default
