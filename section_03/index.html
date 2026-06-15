@@ -1,0 +1,1483 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MSmaster is an academic metabolomics platform for FMN, Metabolic reaction fusion molecular networks (MR-FMN), MS/MS annotation, and traceable molecular network analysis.">
+      
+      
+      
+        <link rel="canonical" href="https://spectroai.github.io/MSmaster/section_03/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>MSmaster modules - MSmaster</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../overrides.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#msmaster-modules" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MSmaster" class="md-header__button md-logo" aria-label="MSmaster" data-md-component="logo">
+      
+  <img src="../Figures/msmaster-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MSmaster
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MSmaster modules
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../manual/section_01/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Platform
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../manual/section_02/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Download
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../manual/section_03/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Capabilities
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../manual/section_04/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Workflows
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../manual/section_05/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FMN Analysis
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../manual/section_06/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  MR-FMN
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MSmaster" class="md-nav__button md-logo" aria-label="MSmaster" data-md-component="logo">
+      
+  <img src="../Figures/msmaster-logo.png" alt="logo">
+
+    </a>
+    MSmaster
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manual/section_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manual/section_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manual/section_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capabilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manual/section_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manual/section_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FMN Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manual/section_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MR-FMN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="msmaster-modules">MSmaster modules</h1>
+<h2 id="metabolomics-analysis">Metabolomics Analysis</h2>
+<h3 id="overview">Overview</h3>
+<p>Batch Metabolomics Analysis performs batch statistical analysis and visualization of multi-sample metabolomics feature tables. Main capabilities:</p>
+<p>•Batch differential analysis: Runs between-group statistical tests and Fold Change (FC) calculation for each CSV in the feature table folder.</p>
+<p>•Result and plot saving: Each sample gets an output subfolder containing the differential result table and volcano plot.</p>
+<p>•Multiple result views: Batch plots (heatmap, RT distribution, PCA, HCA), single-sample plots (volcano, heatmap, boxplot), and result table browsing.</p>
+<p>•Reaction product prediction and annotation: Predicts reaction products from a list of molecular weights and matches/annotates them against each sample's metabolomics results.</p>
+<h3 id="interface-layout">Interface Layout</h3>
+<p>The tab is split into a left control panel and a right results panel:</p>
+<p>Left panel: Project path, feature table folder, batch analysis parameters, Data Preprocessing / Statistical Analysis (advanced), reaction product annotation settings, analysis log and progress.</p>
+<p>Right panel: Three result views (Batch / Single Sample / Single Compound), chart and table display.</p>
+<p><img alt="" src="../assets/manual/img_0001.png" /></p>
+<h3 id="workflow">Workflow</h3>
+<h4 id="1-set-project-path">① Set Project Path</h4>
+<p>• Click the folder icon next to the field and choose the root directory for all batch results.</p>
+<p>• After analysis, a subfolder per sample is created (folder name = CSV filename without .csv), containing:</p>
+<ul>
+<li>
+<p>FeatureTable.csv (copied and renamed from the feature table folder)</p>
+</li>
+<li>
+<p>MetaboResult.csv (differential analysis results)</p>
+</li>
+<li>
+<p>MetaboResult.png (volcano plot, if "save plots" is enabled)</p>
+</li>
+</ul>
+<p>• If you later run Reaction Product Annotation, MSFindResult.csv will be added to each sample folder.</p>
+<h4 id="2-set-feature-table-folder">② Set Feature Table Folder</h4>
+<p>• Select the folder that holds one CSV per sample (feature tables).</p>
+<p>• Each CSV = one sample; the filename (without .csv) is used as the sample name and as the subfolder name under the project path.</p>
+<p>• Format: rows = metabolites/features (e.g. RT_MZ or compound labels), columns = samples or groups (e.g. Group1, Group1.1, Group2), values = intensities. The program infers groups from column names (e.g. Group1, Group1.1 = same group).</p>
+<h4 id="3-run-batch-analysis">③ Run batch analysis</h4>
+<p>• Expand Batch Metabolomics Analysis (collapsed by default).</p>
+<p>• Optionally expand Data Preprocessing (Advanced) and Statistical Analysis (Advanced) to adjust parameters (see below).</p>
+<p>Statistical Analysis</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Missing Value Threshold</td>
+<td>0.8</td>
+<td>Features missing in more than this fraction of samples are removed (range: 0–1).</td>
+</tr>
+<tr>
+<td>Imputation Method</td>
+<td>median</td>
+<td>Method used to fill missing values: median, mean, or zero.</td>
+</tr>
+<tr>
+<td>Log Transform</td>
+<td>Checked</td>
+<td>Whether intensity values are log-transformed.</td>
+</tr>
+<tr>
+<td>Log Base</td>
+<td>2</td>
+<td>Base used for log transformation.</td>
+</tr>
+<tr>
+<td>Scaling</td>
+<td>standard</td>
+<td>Data scaling method: standard, minmax, robust, or None.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test Method</td>
+<td>ttest</td>
+<td>Statistical test for between-group comparison: ttest, mannwhitney, or permutation.</td>
+</tr>
+<tr>
+<td>Fold Change Method</td>
+<td>log2</td>
+<td>Fold-change calculation: log2, ratio, or difference.</td>
+</tr>
+<tr>
+<td>Pseudo Count</td>
+<td>1</td>
+<td>Value added when computing fold change to avoid division by zero.</td>
+</tr>
+<tr>
+<td>Permutation Count</td>
+<td>1000</td>
+<td>Number of permutations used in the permutation test.</td>
+</tr>
+</tbody>
+</table>
+<p>• Click Start Batch Analysis.</p>
+<p>• Analysis runs in the background; progress and Analysis Log show status. On completion a dialog appears and feature tables are copied into the project path under each sample folder.</p>
+<h4 id="4-optional-reaction-product-prediction-and-annotation">④ Optional: Reaction Product Prediction and Annotation</h4>
+<p>• Input Data: In "Input Data (comma-separated molecular weights)" enter molecular weights separated by commas, e.g. 228.25, 180.16, 162.05.</p>
+<p>• Manage Reaction Types: Use Manage Reaction Types to view and enable/disable predefined reaction types (single- or multi-step). Prediction uses only enabled types.</p>
+<p><img alt="" src="../assets/manual/img_0002.png" /></p>
+<p>• Match Threshold: Mass/time tolerance for matching (default 0.02).</p>
+<p>• Run Prediction &amp; Annotation runs prediction from the molecular weight list, then matches and writes/updates MSFindResult.csv in each sample folder using MetaboResult.csv.</p>
+<p>• Note: Annotation needs existing sample folders and MetaboResult.csv under the project path, so you typically run batch analysis first.</p>
+<h4 id="5-result-views">⑤ Result Views</h4>
+<p>Batch Result Analysis</p>
+<p>• Heatmap: Built from MSFindResult.csv in each sample folder; Show Significant Only restricts to significant compounds.</p>
+<p>• RT Distribution: Retention-time distribution across groups; same "significant only" option.</p>
+<p>• PCA: PCA on the merged feature table from all samples' MetaboResult.csv.</p>
+<p>• HCA: Hierarchical clustering on the same merged table.</p>
+<p>Plot Controls:</p>
+<p>• Figure size (width/height, inches), DPI, export format (PNG, PDF, SVG, etc.)</p>
+<p>• Color theme, font size</p>
+<p>• Apply Settings redraws with current settings; Save Plot saves the current figure; Reset restores defaults</p>
+<p>Single Sample Result Analysis</p>
+<p>• Select Sample: Choose a sample from the dropdown (list is updated after batch analysis from the feature table folder CSVs).</p>
+<p>• After clicking Analyze, choose:</p>
+<ul>
+<li>
+<p>Volcano Plot: p-value vs. FC for that sample.</p>
+</li>
+<li>
+<p>Heatmap: Heatmap for that sample.</p>
+</li>
+<li>
+<p>Boxplot: Boxplot for that sample.</p>
+</li>
+</ul>
+<p>Single-sample view has its own Plot Controls (size, DPI, format, fonts, volcano annotations, etc.).</p>
+<p>Single Compound Result Analysis (Result Tables)</p>
+<p>• Select Sample: Choose the sample.</p>
+<p>• Click one of:</p>
+<ul>
+<li>
+<p>FeatureTable: Shows that sample's FeatureTable.csv.</p>
+</li>
+<li>
+<p>MetaboResult: Shows that sample's MetaboResult.csv (differential results).</p>
+</li>
+<li>
+<p>MSFindResult: Shows that sample's MSFindResult.csv (reaction product matches; requires running prediction and annotation first).</p>
+</li>
+</ul>
+<h4 id="6-output-file-structure">⑥ Output File Structure</h4>
+<p>Under Project Path, one subfolder per sample, e.g.:</p>
+<p>Project Path/</p>
+<p>SampleA/</p>
+<p>FeatureTable.csv    (Copied from Feature Table Folder and renamed)</p>
+<p>MetaboResult.csv    (Differential analysis: p_adj, fc, etc.)</p>
+<p>MetaboResult.png    (Volcano plot, if save plots enabled)</p>
+<p>MSFindResult.csv    (Reaction product annotation, if prediction and annotation was run)</p>
+<p>SampleB/</p>
+<p>FeatureTable.csv</p>
+<p>MetaboResult.csv</p>
+<p>MetaboResult.png</p>
+<p>MSFindResult.csv</p>
+<p>...</p>
+<p>• Batch analysis iterates over all CSVs in Feature Table Folder and creates this structure and writes results.</p>
+<p>• Reaction product annotation iterates over each sample folder under the project path, reads MetaboResult.csv, matches predicted products, and writes MSFindResult.csv.</p>
+<h3 id="4-faq">4) FAQ</h3>
+<ol>
+<li>"Please select project path first" / "Please select feature table folder first"</li>
+</ol>
+<p>Set Project Path and Feature Table Folder, then click Start Batch Analysis.</p>
+<ol>
+<li>Single-sample dropdown not updated after batch analysis</li>
+</ol>
+<p>The "Select Sample" list is filled from CSV filenames in Feature Table Folder. If it stays empty, check that the folder contains .csv files and the path is correct.</p>
+<ol>
+<li>Heatmap / RT Distribution error: "No MSFindResult.csv files found"</li>
+</ol>
+<p>These plots need MSFindResult.csv in each sample folder. Run Run Prediction &amp; Annotation first to generate them. If you only ran differential analysis, use PCA / HCA (they only need MetaboResult).</p>
+<ol>
+<li>Do I need to run batch analysis before reaction product annotation?</li>
+</ol>
+<p>Yes. Annotation reads MetaboResult.csv in each sample folder under the project path, so run Start Batch Analysis and ensure MetaboResult files exist.</p>
+<ol>
+<li>Feature table format</li>
+</ol>
+<p>Rows = features (e.g. RT_MZ or compound ID), columns = samples/groups, cells = intensity. Groups are inferred from column names (e.g. Group1, Group1.1 = same group). Exact conventions follow the program's grouping logic.</p>
+<h3 id="5-relation-to-other-modules">5) Relation to Other Modules</h3>
+<p>•Molecular Networks: Can use the project path and sample folders (and their feature/result files) as metabolomics data or annotation source.</p>
+<p>• Advanced Analysis: Can import the project directory or networks/tables produced here for embedding analysis, metabolomics integration, etc.</p>
+<p>• AI DatabaseGen: Standalone; builds search DBs from SMILES. It does not depend on this tab's output, but you can run batch metabolomics first and then use the database for identification and annotation in the same project.</p>
+<h2 id="msms-annotation">MS/MS annotation</h2>
+<h3 id="1-overview">1) Overview</h3>
+<p>MS Identification identifies compounds from MS/MS spectra using database search and AI-based deep learning models. Main capabilities:</p>
+<p>• Basic Search: Spectral similarity search against an MGF database (cosine, dot product, or Pearson). Filter by m/z tolerance, minimum similarity, and TOP N hits.</p>
+<p>•AI Search: DNN (Standard DNN or Transformer DNN) generates molecular fingerprints from spectra and compares them with an NPZ fingerprint database. Mass filtering uses ion type from the spectrum; results are ranked by fingerprint similarity.</p>
+<p>• Result and structure display: Per-spectrum identification results with candidate table, structure visualization, and export. Support for both positive and negative ion modes.</p>
+<p>• Optional filters: Restrict spectra by precursor m/z, characteristic fragments, or neutral loss list before running identification.</p>
+<h3 id="2-interface-layout">2) Interface Layout</h3>
+<p>The tab is split into a left control panel and a right results panel:</p>
+<p>Left panel: Input Data (mass spectrum file, acquisition mode, Load Mass Spectrum File), Basic Search Method (database MGF, Load Database, m/z tolerance, similarity method, min similarity, TOP N, Run Basic Search), AI Search Method (database NPZ, Load Database, DNN model type, checkpoint path, mass tolerance, DNN similarity method, min DNN similarity, device, Identify Single Spectrum, Batch Identify All Spectra), Spectra Filters (precursor m/z list, fragment list, neutral loss list and tolerances, Filter Spectra, Clear Filter), progress bar and status.</p>
+<p>Right panel: Sub-tabs — Spectrum Data (spectrum table and selected spectrum info), Identification Results (Basic) (basic search results table), Identification Results (AI search results table with structure view), Filtered Spectra (spectra after filters), Final Result Table (consolidated results). Export and copy options where applicable.</p>
+<p><img alt="" src="../assets/manual/img_0003.png" /></p>
+<h3 id="3-workflow">3) Workflow</h3>
+<h4 id="1-set-mass-spectrum-file-and-acquisition-mode">① Set mass spectrum file and acquisition mode</h4>
+<p>• Click the folder icon next to Mass Spectrum File and select an MGF file.</p>
+<p>• Set Acquisition Mode to Positive or Negative to match your data.</p>
+<p>• Click Load Mass Spectrum File. The spectrum list appears in the Spectrum Data sub-tab.</p>
+<p><img alt="" src="../assets/manual/img_0004.png" /></p>
+<h4 id="2-optional-basic-search">② (Optional) Basic Search</h4>
+<p><img alt="" src="../assets/manual/img_0005.png" /></p>
+<p>• In Basic Search Method, set Database (MGF) to your MGF database path (e.g. Database/ALL_GNPS_positive.mgf or negative).</p>
+<p>• Click Load Database.</p>
+<p>• Set m/z Tolerance, Similarity Method (cosine / dot_product / pearson), Min Similarity, and TOP N.</p>
+<p>• Click Run Basic Search. Results appear in the Identification Results (Basic) sub-tab.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>m/z Tolerance</td>
+<td>0.1 Da</td>
+<td>Mass tolerance used for peak matching when computing spectral similarity.</td>
+</tr>
+<tr>
+<td>Similarity Method</td>
+<td>cosine</td>
+<td>Similarity metric: cosine, dot_product, or pearson.</td>
+</tr>
+<tr>
+<td>Min Similarity</td>
+<td>0.05</td>
+<td>Minimum similarity score required for a hit to be reported.</td>
+</tr>
+<tr>
+<td>TOP N</td>
+<td>10</td>
+<td>Maximum number of candidate matches returned per spectrum.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-load-ai-database-and-set-ai-search-parameters">③ Load AI database and set AI Search parameters</h4>
+<p><img alt="" src="../assets/manual/img_0006.png" /></p>
+<p>• In AI Search Method, set Database to your NPZ fingerprint file (e.g. Database/MSFPDB.npz).</p>
+<p>• Click Load Database. Status should show "Database: Loaded".</p>
+<p>• Choose DNN Model Type: Standard DNN or Transformer DNN.</p>
+<p>• Mass Filter Type is auto-detected from the ion_type column in the spectrum data.</p>
+<p>• Set Mass Tolerance (default 0.01 Da), DNN Similarity Method (cosine or tanimoto), Min DNN Similarity (default 0.8), and Device (cpu or cuda).</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Database</td>
+<td>MSFPDB.npz</td>
+<td>NPZ file containing compound fingerprints used for candidate matching.</td>
+</tr>
+<tr>
+<td>DNN Model Type</td>
+<td>Standard DNN</td>
+<td>Model type for fingerprint prediction: Standard DNN or Transformer DNN.</td>
+</tr>
+<tr>
+<td>Mass Tolerance</td>
+<td>0.01 Da</td>
+<td>Precursor mass window used to filter candidate compounds.</td>
+</tr>
+<tr>
+<td>DNN Similarity Method</td>
+<td>cosine</td>
+<td>Similarity metric for fingerprint comparison: cosine or tanimoto.</td>
+</tr>
+<tr>
+<td>Min DNN Similarity</td>
+<td>0.8</td>
+<td>Minimum fingerprint similarity required to report a candidate.</td>
+</tr>
+<tr>
+<td>TOP N</td>
+<td>10</td>
+<td>Maximum number of candidates returned per spectrum.</td>
+</tr>
+<tr>
+<td>Device</td>
+<td>cpu</td>
+<td>Compute device: cpu or cuda.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="4-optional-spectra-filters">④ Optional: Spectra Filters</h4>
+<p>• Expand Spectra Filters. Optionally enter:</p>
+<ul>
+<li>
+<p>Precursor m/z List (one per line or comma-separated) and Precursor m/z Tolerance.</p>
+</li>
+<li>
+<p>Characteristic Fragment List and Fragment m/z Tolerance.</p>
+</li>
+<li>
+<p>Neutral Loss List (precursor m/z − fragment m/z) and Neutral Loss Tolerance.</p>
+</li>
+</ul>
+<p>• Click Filter Spectra to restrict the loaded spectra; filtered list appears in Filtered Spectra sub-tab. Click Clear Filter to restore the full list.</p>
+<p><img alt="" src="../assets/manual/img_0007.png" /></p>
+<h4 id="5-result-views_1">⑤ Result views</h4>
+<p>Batch / single identification results are shown in the right panel:</p>
+<p>Identification Results (Basic)</p>
+<p>• Table of basic search hits: spectrum index, candidate compound, similarity, m/z, etc. Select a row to view details or structure if available. Click a row to view structure and spectrum comparison, After manual confirmation, click the green Add button after each line to add the results to the final annotation result:</p>
+<p><img alt="" src="../assets/manual/img_0008.png" /></p>
+<p>Identification Results (AI)</p>
+<p>• Table of AI search hits: columns such as rank, compound name, SMILES, formula, molecular weight, experimental/theoretical m/z, m/z diff, DNN similarity, After manual confirmation, click the green Add button after each line to add the results to the final annotation result.</p>
+<p><img alt="" src="../assets/manual/img_0009.png" /></p>
+<p>• Double click on each row to view the MS/MS spectrum attribution and predict the parts of the structure that are prone to neutral loss:</p>
+<p><img alt="" src="../assets/manual/img_0010.png" /></p>
+<p>Filtered Spectra</p>
+<p>• Spectra that remain after applying Spectra Filters.</p>
+<p><img alt="" src="../assets/manual/img_0011.png" /></p>
+<h4 id="6-output-and-export">⑥ Output and export</h4>
+<p>• Identification results are displayed in-table; you can copy or export from the result sub-tabs (e.g. Export to CSV in Spectrum Data, or table export in result tabs where provided).</p>
+<p>• No fixed folder structure like Batch Metabolomics; outputs are primarily on-screen tables and any user-triggered export paths.</p>
+<h3 id="4-faq_1">4) FAQ</h3>
+<ol>
+<li>"Please select mass spectrum file" or database not loaded</li>
+</ol>
+<p>Load the MGF file with Load Mass Spectrum File first. For Basic Search load the MGF database with Load Database; for AI Search load the NPZ database with Load Database and ensure the status shows "Database: Loaded".</p>
+<ol>
+<li>No or few AI search hits</li>
+</ol>
+<p>Check Acquisition Mode (Positive/Negative) matches your data. Lower Min DNN Similarity (e.g. to 0.5) or increase Mass Tolerance slightly. Ensure the NPZ database contains compounds in the relevant mass range and that the DNN checkpoint matches the chosen Model Type (Standard DNN vs Transformer DNN).</p>
+<ol>
+<li>Basic Search vs AI Search</li>
+</ol>
+<p>Basic Search uses raw spectral similarity (cosine, dot product, or Pearson) against an MGF spectral library. AI Search uses DNN-generated fingerprints and an NPZ fingerprint database; it is typically more robust to instrument differences and can use a large compound set (e.g. MSFPDB).</p>
+<ol>
+<li>Supported ion types for mass filtering (AI Search)</li>
+</ol>
+<p>The tool auto-detects ion type from the spectrum metadata. Supported types include [M+H]+, [M-H]-, [M-H-H]2-, [M+Na]+, [M+K]+, [M+2H]2+, [M-2H]2-, [M+2Na]2+ and similar. Mass filtering is applied using the detected type before ranking by DNN similarity.</p>
+<ol>
+<li>Filter Spectra: when to use</li>
+</ol>
+<p>Use Spectra Filters to restrict identification to spectra that contain certain precursor m/z, characteristic fragments, or neutral losses (e.g. 18.015 for water loss). This reduces runtime and focuses on subsets of interest.</p>
+<h3 id="5-relation-to-other-modules_1">5) Relation to Other Modules</h3>
+<p>• Batch Metabolomics Analysis: Independent; works with feature tables and CSV results. MS Identification works with raw MGF and identification databases. You can use identified compounds from MS Identification to interpret or annotate batch metabolomics results in a separate workflow.</p>
+<p>• Molecular Networks: Can use the same MGF file as MS Identification. Network nodes can be annotated with identification results; some workflows allow running AI search from the network context using the same DNN and database settings.</p>
+<p>• Advanced Analysis: Can import networks and integrate metabolomics data. Identification results (e.g. compound names, SMILES) from MS Identification can support node annotation and structure display in Advanced Analysis.</p>
+<p>• AI DatabaseGen: Generates NPZ fingerprint databases from SMILES (e.g. for use as the Database in AI Search). Use AI DatabaseGen to build or update the database that MS Identification loads for Batch Identify All Spectra.</p>
+<h2 id="fusion-molecular-networks-fmn">Fusion Molecular Networks (FMN)</h2>
+<h3 id="1-overview_1">1) Overview</h3>
+<p>Molecular Networks constructs and visualizes molecular networks based on spectral similarity between MS/MS spectra. Main capabilities:</p>
+<p>• Multiple similarity methods: Cosine similarity (spectral peak alignment), neutral loss similarity (shared fragmentation pathways), Spec2Vec (spectrum embeddings), DNN fingerprints (Standard DNN or Transformer DNN), or hierarchical fusion (combines cosine, neutral loss, and DNN methods in one network).</p>
+<p>• Interactive network visualization: Select network components, adjust layout (spring, kamada_kawai, etc.), customize node/edge appearance, and click nodes to view spectrum details and AI search results.</p>
+<p>• Component analysis and export: Component table with statistics (nodes, edges, density), export network to XGMML, export MGF, export component table to CSV.</p>
+<p>• Optional filters: Metabolomics filter (feature table with experimental/control groups and ratio threshold) or reactant filter (exclude spectra matching a reactant MGF by RT, m/z, and cosine similarity).</p>
+<p>• Optional AI Search: After network building, run DNN-based compound identification on network nodes; results appear when clicking nodes.</p>
+<h3 id="2-interface-layout_1">2) Interface Layout</h3>
+<p>The tab is split into a left control panel and a right visualization panel:</p>
+<p>Left panel: Experiment Path Setting (Single Experiment Path), MS/MS Data Input (MGF File), Filter Settings (Metabolomics Filter: feature table, experimental/control groups, ratio threshold; Reactant Filter: reactant MGF, RT/m/z/cosine tolerances), Analysis Parameters (similarity method, threshold, max edges, min peaks, min intensity, max component size; for hierarchical fusion: per-method thresholds and max edges, model paths), AI Search Parameters (optional: DNN model, AI database, mass tolerance, DNN similarity, min similarity, max candidates, max spectra), Analysis Control (Start Network Analysis, Stop Analysis), Result Export (Export All Results), progress bar, Analysis Log.</p>
+<p>Right panel: Select Network Component dropdown, molecular weight search, Network Visualization (interactive graph), Plot Parameters (General: layout, iterations, figure size; Node: size, color, labels; Edge: width, color), Component Table (network statistics per component). Click nodes to view spectrum info and AI search candidates.</p>
+<p><img alt="" src="../assets/manual/img_0012.png" /></p>
+<h3 id="3-workflow_1">3) Workflow</h3>
+<h4 id="1-set-experiment-path">① Set experiment path</h4>
+<p>• In Experiment Path Setting, click Select Single Experiment Path and choose the folder where results (molecular_network.xgmml, network_components.csv, etc.) will be saved.</p>
+<p><img alt="" src="../assets/manual/img_0013.png" /></p>
+<h4 id="2-set-mgf-file">② Set MGF file</h4>
+<p>• In MS/MS Data Input, click the folder icon and select your MGF file containing MS/MS spectra.</p>
+<p>• The MGF path is used when you start the analysis; spectra are filtered, normalized, and used to build the network.</p>
+<p><img alt="" src="../assets/manual/img_0014.png" /></p>
+<h4 id="3-optional-configure-filters">③ (Optional) Configure filters</h4>
+<p>• Metabolomics Filter: Set Feature Table File to a CSV with intensity columns. Select Experimental Group and Control Group. Set Ratio Threshold (e.g. 5.0); features with (Experimental/Control) ratio below this are filtered out. Check Enable Metabolomics Filter to apply.</p>
+<p>• Reactant Filter: Set Reactant MGF File to an MGF of reactant spectra. Set RT Tolerance (min), MZ Tolerance (Da), and Cosine Threshold. Spectra matching reactants (by RT, m/z, and cosine similarity) are excluded. Check Enable Reactant Filter to apply.</p>
+<p><img alt="" src="../assets/manual/img_0015.png" /></p>
+<h4 id="4-set-analysis-parameters">④ Set analysis parameters</h4>
+<p>• Expand Analysis Parameters.</p>
+<p>• Choose Similarity Method: cosine, neutral_loss, spec2vec, dnn_fingerprint, Transformer_DNN, or hierarchical_fusion.</p>
+<p>• For cosine, neutral_loss, spec2vec: set Similarity Threshold (default 0.7), Max Edges per Node (default 3), Min Peaks (default 4), Min Intensity (default 100), Max Component Size (default 100).</p>
+<p>• For dnn_fingerprint or Transformer_DNN: same parameters plus DNN Model Type and DNN Model Path.</p>
+<p>• For hierarchical_fusion: set per-method Threshold and Max Edges for Cosine, Neutral Loss, Standard DNN, Transformer DNN; set model paths; set Max Component Size.</p>
+<p>• Click Start Network Analysis. Analysis runs in the background; use Stop Analysis to interrupt. Progress and log appear at the bottom of the left panel.</p>
+<p><img alt="" src="../assets/manual/img_0016.png" /></p>
+<p>Analysis Parameters (non-fusion)</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Similarity Method</td>
+<td>cosine</td>
+<td>Spectral similarity method: cosine, neutral_loss, spec2vec, dnn_fingerprint, Transformer_DNN, or hierarchical_fusion.</td>
+</tr>
+<tr>
+<td>Similarity Threshold</td>
+<td>0.7</td>
+<td>Minimum similarity score required to create an edge between two spectra.</td>
+</tr>
+<tr>
+<td>Max Edges per Node</td>
+<td>3</td>
+<td>Maximum number of connections allowed per node to maintain a sparse network.</td>
+</tr>
+<tr>
+<td>Min Peaks</td>
+<td>4</td>
+<td>Minimum number of peaks required for a spectrum to be included in the network.</td>
+</tr>
+<tr>
+<td>Min Intensity</td>
+<td>100</td>
+<td>Minimum peak intensity threshold for peak filtering.</td>
+</tr>
+<tr>
+<td>Max Component Size</td>
+<td>100</td>
+<td>Network components larger than this size are split for easier visualization.</td>
+</tr>
+</tbody>
+</table>
+<p>Hierarchical Fusion Parameters (when Similarity Method = hierarchical_fusion)</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cosine Threshold</td>
+<td>0.7</td>
+<td>Similarity threshold for edges based on cosine similarity.</td>
+</tr>
+<tr>
+<td>Cosine Max Edges</td>
+<td>3</td>
+<td>Maximum number of edges per node derived from cosine similarity.</td>
+</tr>
+<tr>
+<td>Neutral Loss Threshold</td>
+<td>0.7</td>
+<td>Similarity threshold for edges based on neutral loss similarity.</td>
+</tr>
+<tr>
+<td>Neutral Loss Max Edges</td>
+<td>3</td>
+<td>Maximum number of edges per node derived from neutral loss similarity.</td>
+</tr>
+<tr>
+<td>Standard DNN Threshold</td>
+<td>0.7</td>
+<td>Similarity threshold for edges based on Standard DNN fingerprints.</td>
+</tr>
+<tr>
+<td>Standard DNN Max Edges</td>
+<td>3</td>
+<td>Maximum number of edges per node derived from Standard DNN fingerprints.</td>
+</tr>
+<tr>
+<td>Transformer DNN Threshold</td>
+<td>0.7</td>
+<td>Similarity threshold for edges based on Transformer DNN fingerprints.</td>
+</tr>
+<tr>
+<td>Transformer DNN Max Edges</td>
+<td>3</td>
+<td>Maximum number of edges per node derived from Transformer DNN fingerprints.</td>
+</tr>
+<tr>
+<td>Max Component Size</td>
+<td>100</td>
+<td>Maximum size of a network component; larger components are split for visualization.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="5-optional-enable-ai-search">⑤ (Optional) Enable AI Search</h4>
+<p>• Expand AI Search Parameters (Optional). Check Enable AI Search.</p>
+<p>• Set DNN Model Type (Standard DNN or Transformer DNN), DNN Model Checkpoint, AI Database (e.g. Database/MSFPDB.npz), Mass Tolerance (default 0.1 Da), DNN Similarity Method (cosine or tanimoto), Min DNN Similarity (default 0.7), Max Candidates (default 10), Max Spectra to Process (default 2000).</p>
+<p>• AI Search runs after the network is built; results are shown when you click a node in the network.</p>
+<p>AI Search Parameters (Optional)</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DNN Model Type</td>
+<td>Standard DNN</td>
+<td>Model used for fingerprint prediction: Standard DNN or Transformer DNN.</td>
+</tr>
+<tr>
+<td>DNN Model Checkpoint</td>
+<td>DNN_model/DNN/best_model_complete.pth</td>
+<td>Path to the trained model file (.pth).</td>
+</tr>
+<tr>
+<td>AI Database</td>
+<td>Database/MSFPDB.npz</td>
+<td>NPZ fingerprint database used for candidate matching.</td>
+</tr>
+<tr>
+<td>Mass Tolerance</td>
+<td>0.1 Da</td>
+<td>Precursor mass window for filtering candidate compounds.</td>
+</tr>
+<tr>
+<td>DNN Similarity Method</td>
+<td>cosine</td>
+<td>Fingerprint similarity metric: cosine or tanimoto.</td>
+</tr>
+<tr>
+<td>Min DNN Similarity</td>
+<td>0.7</td>
+<td>Minimum fingerprint similarity required to report a candidate.</td>
+</tr>
+<tr>
+<td>Max Candidates</td>
+<td>10</td>
+<td>Maximum number of candidate matches per spectrum.</td>
+</tr>
+<tr>
+<td>Max Spectra to Process</td>
+<td>2000</td>
+<td>Upper limit on the number of spectra processed to avoid memory issues.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="6-result-views">⑥ Result views</h4>
+<p>After analysis completes:</p>
+<p>Select Network Component</p>
+<p>• Use the dropdown to choose which component to display. Use the molecular weight search box to quickly find the component containing a given m/z.</p>
+<p>Network Visualization</p>
+<p>• Interactive graph: nodes = spectra, edges = similarity above threshold. Adjust Plot Parameters (layout algorithm, iterations, node size/color, edge width) and redraw as needed. Click a node to view spectrum details and (if AI Search was run) identification candidates.</p>
+<p>Component Table</p>
+<p>• Table of components with node count, edge count, edge types (for fusion), density, etc. Sort and browse to explore the network structure.</p>
+<p>Export</p>
+<p>• Export All Results: saves molecular_network.xgmml, network_components.csv, MGF (filtered spectra), and AI search results (if enabled) to the experiment path.</p>
+<h4 id="7-output-file-structure">⑦ Output file structure</h4>
+<p>Under the experiment path:</p>
+<p>molecular_network.xgmml    (Network graph for Cytoscape or other tools)</p>
+<p>network_components.csv     (Component statistics)</p>
+<p>(If AI Search enabled) AI search result files</p>
+<p>(If export includes MGF) Exported MGF of spectra used in the network</p>
+<p>• The network is built from the MGF spectra after applying filters (metabolomics, reactant) and quality filters (min peaks, min intensity). Each node corresponds to a spectrum; edges connect spectra with similarity above the threshold.</p>
+<h4 id="4-faq_2">4) FAQ</h4>
+<ol>
+<li>"Please select MGF file" or "Please select experiment path"</li>
+</ol>
+<p>Set Single Experiment Path and MGF File before clicking Start Network Analysis.</p>
+<ol>
+<li>No or few edges in the network</li>
+</ol>
+<p>Lower Similarity Threshold (e.g. to 0.5) or increase Max Edges per Node. For cosine/neutral loss, ensure spectra have enough peaks (Min Peaks) and that Filter Settings are not excluding too many spectra.</p>
+<ol>
+<li>Spec2Vec or DNN method requires additional files</li>
+</ol>
+<p>Spec2Vec needs a trained Word2Vec model path (not shown in default UI; if unavailable, the program may fall back to cosine). DNN methods need the correct model checkpoint path; Transformer DNN uses a different .pth than Standard DNN.</p>
+<ol>
+<li>Hierarchical fusion: what order are connections built?</li>
+</ol>
+<p>Connections are built in order: 1) Cosine 2) Neutral loss 3) Standard DNN 4) Transformer DNN. Each method adds edges only where none exist yet, so the network combines multiple similarity types without duplicate edges.</p>
+<ol>
+<li>AI Search not showing when clicking nodes</li>
+</ol>
+<p>Ensure Enable AI Search was checked before starting the analysis, and that the AI Database and DNN Model Checkpoint paths are valid. AI Search runs after network building; if it failed, check the Analysis Log for errors.</p>
+<h4 id="5-relation-to-other-modules_2">5) Relation to Other Modules</h4>
+<p>• Batch Metabolomics Analysis: Produces feature tables and MetaboResult files. The Molecular Networks Metabolomics Filter can use a feature table from batch analysis to filter spectra by experimental/control ratio before building the network.</p>
+<p>• MS Identification: Uses the same DNN models and AI database for compound identification. Molecular Networks AI Search applies the same identification logic to network nodes; results format is consistent with MS Identification.</p>
+<p>• Advanced Analysis: Can import the molecular_network.xgmml produced here, integrate metabolomics data, and provide enhanced visualization (embeddings, box plots, structure display). Use Export to save the network for Advanced Analysis.</p>
+<p>• AI DatabaseGen: Generates NPZ fingerprint databases (e.g. MSFPDB.npz) used by Molecular Networks AI Search. Build or update the database with AI DatabaseGen, then set AI Database in Molecular Networks to the new file.</p>
+<h2 id="advanced-analysis">Advanced Analysis</h2>
+<h3 id="1-overview_2">1) Overview</h3>
+<p>Advanced Analysis provides integrated analysis of molecular networks with embedding features, metabolomics data integration, structure identification, and reaction visualization. Main capabilities:</p>
+<p>• Experiment Folder Import: Auto-import network files (network_edges.csv, network_nodes.csv, network_components.csv), MGF, DNN fingerprints, feature table, metabolomics results, AI search results, filtered spectra info, and pie chart data from an experiment folder.</p>
+<p>• Network Import: Manually load network from CSV files (network_edges.csv, network_nodes.csv, optional network_components.csv). Nodes require node_id and precursor_mz columns; edges require source, target, and weight columns.</p>
+<p>• Interactive network visualization: Select network components, search by m/z, adjust layout and plot parameters. Click nodes to view mass spectrum, molecular structure (from AI search), and box plot (from metabolomics data).</p>
+<p>• Reaction Analysis: Load reactant (raw material) MGF, match products to reactants by RT/m/z/cosine similarity, and generate reaction visualization with similarity-based connections (cosine, neutral loss, DNN, Transformer DNN, or fusion).</p>
+<p>• Embedding and metabolomics integration: Load DNN fingerprints and metabolomics data to color nodes, display box plots, and integrate multiple data types in the network view.</p>
+<h3 id="2-interface-layout_2">2) Interface Layout</h3>
+<p>The tab is split into a left control panel and a right visualization panel (resizable via splitter):</p>
+<p>Left panel: Experiment Folder Import (Experiment Folder, Auto-Import Files, import status), Network Import (Network Edges, Network Nodes, Network Components optional, Import Network), Spectrum Data Import (MGF File, Load MGF Data), Reaction Analysis (Reactant Import: reactant MGF, RT/m/z/cosine tolerances, reaction MW tolerance, Manage Reaction Types; Reaction Visualization: similarity method, DNN model path, thresholds, reactant annotation strategy, Generate Reaction Visualization), Embedding Input (DNN Fingerprints, Load DNN Fingerprints), Metabolomics Import (Feature Table, Metabolomics Results, Load Metabolomics Data), Annotation Import (AI Search Results, Load Annotation Data), Filter results Import (Filtered Spectra Info, Load Filter Data), Pie Chart Data Import (Pie Chart Data, RT/m/z tolerances, Load Pie Chart Data).</p>
+<p>Right panel: Sub-tabs — Network Visualization (Select Network Component, Search m/z, interactive network graph, Plot Parameters: General/Node/Edge), All Networks (plot all components), Heatmap (metabolomics integration), and other visualization tabs. Click nodes to view spectrum, structure, and box plot in popup or side panel.</p>
+<p><img alt="" src="../assets/manual/img_0017.png" /></p>
+<h3 id="3-workflow_2">3) Workflow</h3>
+<h4 id="1-import-data">① Import data</h4>
+<p>Option A — Auto-Import:</p>
+<p>• Set Experiment Folder to the folder containing your analysis outputs (e.g. from Molecular Networks export).</p>
+<p>• Click Auto-Import Files. The tool scans for network_edges.csv, network_nodes.csv, network_components.csv, MGF, DNN fingerprints, feature table, metabolomics results, AI search results, filtered spectra info, and pie chart data. Found files are filled into the corresponding input fields. If network files are found, Import Network may run automatically.</p>
+<p><img alt="" src="../assets/manual/img_0018.png" /></p>
+<p>Option B — Manual Import:</p>
+<p>• Expand Network Import. Set Network Edges to network_edges.csv (columns: source, target, weight; optional edge_type). Set Network Nodes to network_nodes.csv (columns: node_id, precursor_mz; optional rt).</p>
+<p>• Optionally set Network Components to network_components.csv (component_id, nodes, size, etc.).</p>
+<p>• Click Import Network. The network graph and component list appear in the right panel.</p>
+<h4 id="2-optional-load-additional-data">② (Optional) Load additional data</h4>
+<p>• Spectrum Data: Set MGF File and click Load MGF Data to link spectra to network nodes. Enables spectrum display when clicking nodes.</p>
+<p>• Metabolomics: Set Feature Table and Metabolomics Results, then Load Metabolomics Data. Enables box plots and intensity-based node coloring.</p>
+<p>• Annotation: Set AI Search Results and Load Annotation Data. Enables structure display and compound names when clicking nodes.</p>
+<p>• Embedding: Set DNN Fingerprints and Load DNN Fingerprints for embedding-based analysis.</p>
+<p>• Filter results: Set Filtered Spectra Info and Load Filter Data if needed.</p>
+<p>• Pie Chart: Set Pie Chart Data and RT/m/z tolerances, then Load Pie Chart Data for batch experiment comparison.</p>
+<h4 id="3-optional-reaction-analysis">③ (Optional) Reaction Analysis</h4>
+<p>• Reactant Import: Set Reactant MGF File (raw material spectra) and click Load Reactant MGF Data. Set RT Tolerance (min), MZ Tolerance (Da), Min Cosine Similarity, Reaction MW Tolerance (Da). Use Manage Reaction Types to configure reaction types.</p>
+<p><img alt="" src="../assets/manual/img_0019.png" /></p>
+<p>•Reaction Visualization: Choose Similarity Method (cosine, neutral_loss, spec2vec, dnn_fingerprint, Transformer_DNN, or fusion). For DNN methods, set DNN Model Path. Set Similarity Threshold and Spectral Similarity Threshold (2nd round). For fusion, set per-method thresholds. Configure Reactant Annotation Strategy (Limit Strategy: Round 1/2 limits; Priority Strategy). Click Generate Reaction Visualization to build the reaction-annotated network.</p>
+<p><img alt="" src="../assets/manual/img_0020.png" /></p>
+<p>Reaction Visualization Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Similarity Method</td>
+<td>cosine</td>
+<td>Method used for reactant–product matching: cosine, neutral_loss, spec2vec, dnn_fingerprint, Transformer_DNN, or fusion.</td>
+</tr>
+<tr>
+<td>Similarity Threshold</td>
+<td>0.5</td>
+<td>Minimum similarity used to filter candidate reactants (for cosine or neutral_loss). Higher thresholds are recommended for DNN-based methods (e.g., 0.8).</td>
+</tr>
+<tr>
+<td>Spectral Similarity Threshold (2nd round)</td>
+<td>0.7</td>
+<td>Threshold for second-round connections between products and reactants not matched in the first round; displayed as dashed edges.</td>
+</tr>
+<tr>
+<td>RT Tolerance</td>
+<td>0.1 min</td>
+<td>Retention time tolerance for reactant matching.</td>
+</tr>
+<tr>
+<td>MZ Tolerance</td>
+<td>0.01 Da</td>
+<td>Mass tolerance used in precursor matching.</td>
+</tr>
+<tr>
+<td>Min Cosine Similarity</td>
+<td>0.7</td>
+<td>Minimum cosine similarity required for MS/MS spectrum matching.</td>
+</tr>
+<tr>
+<td>Reaction MW Tolerance</td>
+<td>0.005 Da</td>
+<td>Molecular weight tolerance for reaction prediction, useful for distinguishing similar modifications (e.g., sulfation vs. phosphorylation).</td>
+</tr>
+<tr>
+<td>Round 1 Limit</td>
+<td>5</td>
+<td>Maximum number of reactants annotated per product in round 1 (limit strategy).</td>
+</tr>
+<tr>
+<td>Round 2 Limit</td>
+<td>3</td>
+<td>Maximum number of reactants annotated per product in round 2 (limit strategy).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="4-result-views">④ Result views</h4>
+<p>The right panel contains five sub-tabs. Each provides different visualization and analysis capabilities.</p>
+<p>Network Visualization tab</p>
+<p>• Component selection: Use Select Network Component dropdown to choose which component to display. Use Search m/z to quickly find the component containing a given molecular weight.</p>
+<p>• Interactive graph: Nodes represent spectra/compounds; edges represent spectral similarity (color-coded by edge type: cosine, neutral_loss, dnn, transformer_dnn). Nodes can be dragged to reposition.</p>
+<p><img alt="" src="../assets/manual/img_0021.png" /></p>
+<p>• Mouse actions: Left-click and drag to move a node. Right-click a node to open the Node Information dialog . Opens a modal dialog with two sub-tabs:</p>
+<ul>
+<li>
+<p>Metabolomics Information: Box plot (intensity by group when metabolomics data loaded), mass spectrum, molecular fingerprint feature description table, AI search matches table (candidate compounds with rank, name, SMILES, similarity). Click a match row to view structure and spectrum comparison.</p>
+</li>
+<li>
+<p>Node &amp; Reactant Details &amp; Spectrum Comparison: Node info table (Node ID, precursor m/z, RT, MS/MS peaks count, ion type, Is Reactant). Matched Reactant info table (if node matches a reactant: m/z, RT, peaks count, cosine similarity). MS/MS spectrum comparison (node vs connected reactants; mirror spectrum when AI search available). Click a candidate to show structure comparison.</p>
+</li>
+</ul>
+<p><img alt="" src="../assets/manual/img_0022.png" /></p>
+<p>• Plot Parameters (collapsible, with General / Node / Edge categories):</p>
+<ul>
+<li>General: Layout algorithm (spring, circular, random, shell, kamada_kawai, spectral), iterations, K (spacing), figure width/height, DPI, Auto Fit to Frame, Margin Factor, Equal Aspect. Show All Networks in One View (display all components in a grid). Show Node Names (use feature table labels instead of m/z).</li>
+</ul>
+<p><img alt="" src="../assets/manual/img_0023.png" /></p>
+<ul>
+<li>Node: Node size, alpha, font size, Node Size Based on Intensity (Group 1/2 for metabolomics-based scaling), border width, Show Labels, Auto Node Size, Reactant marker size, Reaction marker size. Pie Chart Colors (Group1/Group2). Node Color (default when no metabolomics).</li>
+</ul>
+<p><img alt="" src="../assets/manual/img_0024.png" /></p>
+<ul>
+<li>Edge: Edge alpha, min/max edge width. Edge colors by type (Cosine, Neutral Loss, DNN, Transformer DNN).</li>
+</ul>
+<p><img alt="" src="../assets/manual/img_0025.png" /></p>
+<p>• Controls: Redraw Network, Reset Parameters, Export Network (XGMML or GraphML for Cytoscape).</p>
+<p>Embedding Analysis tab</p>
+<p>• Dimension selection: Section (All Dimensions 0–880, or predefined sections: Hierarchic Element Counts, Rings, Simple atom pairs, etc.), Custom (comma-separated dimension indices), Range (start-end). Apply Custom, Apply Range, Clear Selection.</p>
+<p>• Show Fingerprint Meanings: Displays meanings of the 881-dimensional Pubchem fingerprint features.</p>
+<p><img alt="" src="../assets/manual/img_0026.png" /></p>
+<p>• Heatmap: DNN fingerprint heatmap for the selected component. Controls: Show Axis Labels, Size (Small/Medium/Large/Extra Large), Color (viridis, plasma, inferno, magma, coolwarm, RdYlBu), Redraw Heatmap.</p>
+<p><img alt="" src="../assets/manual/img_0027.png" /></p>
+<p>• Requires: DNN Fingerprints loaded (e.g. Transformer_DNN_Fingerprints.csv).</p>
+<p>Reaction Visualization tab</p>
+<p>• Displays the reaction-annotated network (after Generate Reaction Visualization). Same layout and interaction as Network Visualization, but with reactant nodes, product nodes, and reaction-annotated edges (solid = reaction-matched, dashed = second-round spectral similarity).</p>
+<p><img alt="" src="../assets/manual/img_0028.png" /></p>
+<p>• Plot Parameters and controls similar to Network Visualization. Export options for reaction network.</p>
+<p>Reaction Details tab</p>
+<p>• Reaction Details table: Component ID, Reactant Node, Product Node, Reactant m/z, Product m/z, Reactant RT, Product RT, MW Delta, Reaction Type. Sortable and exportable.</p>
+<p><img alt="" src="../assets/manual/img_0029.png" /></p>
+<p>• Reaction Type Statistics and chart views: Use the switch buttons above the chart area to toggle between six visualization modes:</p>
+<p>(1) Reaction Type Statistics (default): Bar chart showing the count of each reaction type. X-axis: functional group names (mapped from reaction types in Manage Reaction Types, e.g. Glycosylation, Methylation). Y-axis: number of product-reactant pairs. When using Fusion method: stacked bar chart with segments colored by similarity method (cosine, neutral_loss, dnn, transformer_dnn); each segment shows how many connections were found by that method. When using a single method (cosine, neutral_loss, etc.): simple bar chart with one color. Total count is displayed above each bar. Buttons: Export Image (PNG/SVG/PDF), Export Full Data (Stacked) (CSV with reaction type, functional group, and per-method counts).</p>
+<p><img alt="" src="../assets/manual/img_0030.png" /></p>
+<p>(2) Retention Time Timeline: Scatter or timeline plot of product-reactant pairs along the retention time axis. Filter Reaction Types: multi-select list to include only selected reaction types; Select All, Clear, Apply Filter. Show Legend button. Export Image.</p>
+<p><img alt="" src="../assets/manual/img_0031.png" /></p>
+<p>(3) Filter Results Pie Chart: Pie chart of filter results statistics (e.g. distribution of spectra or features that passed filters). Export Image, Export Data.</p>
+<p><img alt="" src="../assets/manual/img_0032.png" /></p>
+<p>(4) Product Intensity Ranking: Bar chart of TOP N reaction products ranked by intensity (from metabolomics/feature table). TOP N spinbox (default 30) controls how many products to display. Export Image, Export Data. Requires metabolomics data.</p>
+<p><img alt="" src="../assets/manual/img_0033.png" /></p>
+<p>(5) Reactant Intensity Ranking: Bar chart of TOP N reactants ranked by intensity. TOP N spinbox (default 30). Export Image, Export Data. Requires metabolomics data.</p>
+<p><img alt="" src="../assets/manual/img_0034.png" /></p>
+<p>(6) Product-Reactant Network Graph: Network graph of products and reactants. TOP N spinbox (default 30) limits displayed nodes. Plot Mode: "Products in Center (Default)" (TOP N products in center, reactants around) or "TOP30 Reactants in Center" (reactants in center, products outside). Export options for the network figure.</p>
+<p><img alt="" src="../assets/manual/img_0035.png" /></p>
+<p><img alt="" src="../assets/manual/img_0036.png" /></p>
+<p>• Requires: Reaction Visualization completed.</p>
+<p>Batch Experiments Visualization tab</p>
+<p>• Project Folder: Select project folder containing multiple experiment folders (each with network_nodes.csv, FeatureTable.csv, etc.).</p>
+<p>• Analyze Experiments: Scans project folder, matches reaction products across experiments, and prepares comparison data.</p>
+<p><img alt="" src="../assets/manual/img_0037.png" /></p>
+<p>• View modes: Stacked Bar Chart (reaction product count or intensity by experiment), Heatmap for Reaction Products (intensity heatmap by experiment and product), Heatmap for Reactants (In body) (reactant intensity heatmap).</p>
+<p><img alt="" src="../assets/manual/img_0038.png" /></p>
+<p>• Heatmap Parameters: Group Selection (mean_group1, mean_group2), RT tolerance, m/z tolerance, figure width/height. Analyze Heatmap, Redraw Heatmap.</p>
+<p><img alt="" src="../assets/manual/img_0039.png" /></p>
+<p>• Requires: Pie Chart Data or batch experiment structure (folder per experiment with network_nodes.csv and FeatureTable.csv).</p>
+<p>Export</p>
+<p>• Export Network: Save current network as XGMML or GraphML for Cytoscape or other tools. Available in Network Visualization and Reaction Visualization tabs.</p>
+<p>• Save All Networks Figure: Export the combined all-networks view as PNG.</p>
+<p>• Other export options (e.g. CSV for reaction details) are available in the respective tabs.</p>
+<h4 id="5-output-and-file-format">⑤ Output and file format</h4>
+<p>Advanced Analysis primarily consumes data produced by other modules (Molecular Networks, Batch Metabolomics, MS Identification). It does not produce a fixed output folder; results are viewed interactively. Export saves the current network or visualization to a user-selected path.</p>
+<p>Required columns for manual import:</p>
+<p>• network_nodes.csv: node_id, precursor_mz; optional: rt</p>
+<p>• network_edges.csv: source, target, weight; optional: edge_type</p>
+<p>• network_components.csv: component_id, nodes (list), size; optional: edge_type_counts</p>
+<h3 id="4-faq_3">4) FAQ</h3>
+<ol>
+<li>"Please select network edges and nodes files" or "Please import network files first"</li>
+</ol>
+<p>Use Auto-Import from an experiment folder that contains network_edges.csv and network_nodes.csv, or manually set Network Edges and Network Nodes and click Import Network.</p>
+<ol>
+<li>Node file missing node_id or precursor_mz column</li>
+</ol>
+<p>The nodes file must have node_id (integer) and precursor_mz (float) columns. Check that your export from Molecular Networks or other tools produces these columns. Rename columns if necessary (e.g. id to node_id).</p>
+<ol>
+<li>No spectrum or structure when clicking a node</li>
+</ol>
+<p>Load MGF Data to enable spectrum display. Load Annotation Data (AI Search Results) to enable structure display. Ensure node IDs in the network match the spectrum indices or labels in the MGF and annotation files.</p>
+<ol>
+<li>Reaction Visualization: no reaction annotations</li>
+</ol>
+<p>Load Reactant MGF Data first. Set RT/m/z/cosine tolerances appropriately. Use Manage Reaction Types to enable the reaction types you need. Ensure reactant spectra have sufficient similarity to product spectra.</p>
+<ol>
+<li>Box plot not showing</li>
+</ol>
+<p>Load Metabolomics Data (Feature Table and Metabolomics Results). The tool matches network nodes to metabolomics features by RT and m/z. If matching fails (e.g. different RT/m/z formats), box plots may be empty. Check RT and m/z tolerance settings in Pie Chart Data Import or matching logic.</p>
+<h3 id="5-relation-to-other-modules_3">5) Relation to Other Modules</h3>
+<p>•Molecular Networks: Produces network_edges.csv, network_nodes.csv, network_components.csv, molecular_network.xgmml, MGF, and AI search results. Use Export All Results in Molecular Networks, then point Advanced Analysis Experiment Folder to that output to auto-import and perform integrated analysis.</p>
+<p>• Batch Metabolomics Analysis: Produces feature tables and MetaboResult files. Advanced Analysis Metabolomics Import can use these for box plots and intensity-based node coloring when the feature table matches network nodes (by RT/m/z).</p>
+<p>• MS Identification: Produces AI Search Results (e.g. AI_Search_Results.csv). Load this in Advanced Analysis Annotation Import to display compound names and structures when clicking network nodes.</p>
+<p>• AI DatabaseGen: Generates NPZ fingerprint databases. Not directly used by Advanced Analysis; DNN fingerprints for embedding input typically come from Molecular Networks or a separate embedding export step.</p>
+<h2 id="35-ai-databasegen">3.5 AI DatabaseGen</h2>
+<h3 id="1-overview_3">1) Overview</h3>
+<p>AI DatabaseGen generates NPZ database files for AI-based compound identification from SMILES strings. Main capabilities:</p>
+<p>• CSV import: Import a CSV file containing a SMILES column. The tool auto-detects the SMILES column (smiles, SMILES, Smiles, SMILES_string, or similar) and optionally a Name column (name, Name, compound_name, etc.).</p>
+<p>• SMILES validation and cleaning: RDKit validates each SMILES; invalid entries are skipped. Null and empty values are removed. Duplicates are deduplicated (first occurrence kept).</p>
+<p>• Molecular properties and adducts: For each valid SMILES, the tool computes molecular formula, exact mass, and m/z values for common adducts (M-H, M+H, M+Na, M+K, M-2H, M+2H, M+2Na).</p>
+<p>• Pubchem fingerprint generation: PaDEL-Descriptor generates Pubchem fingerprints for each compound. These fingerprints are used by the DNN model in MS Identification and Molecular Networks AI Search.</p>
+<p>• NPZ output: Saves a compressed NPZ file containing smiles, formula, Molecular_Weight, ion m/z columns, PubchemFP, and name. The NPZ file can be used as the AI Database in MS Identification and Molecular Networks.</p>
+<h3 id="2-interface-layout_3">2) Interface Layout</h3>
+<p>The tab is split into a left control panel and a right results panel:</p>
+<p>Left panel: Input Files (Input CSV File, Output NPZ File, Browse buttons), Control Buttons (Generate Database, Clear), progress bar, status label.</p>
+<p>Right panel: Generation Results (log text area showing validation and processing messages, results table with columns: Index, SMILES, Formula, Exact Mass, Embedding, Adducts). The table may display a summary of processed compounds when available.</p>
+<p><img alt="" src="../assets/manual/img_0040.png" /></p>
+<h3 id="3-workflow_3">3) Workflow</h3>
+<h4 id="1-prepare-input-csv">① Prepare input CSV</h4>
+<p>• Create a CSV file with at least one column containing SMILES strings. Supported column names: smiles, SMILES, Smiles, SMILES_string, smiles_string. If no exact match, the tool may auto-detect a column that looks like SMILES (e.g. contains C, N, O, parentheses, brackets).</p>
+<p>• Optional: Include a Name column (name, Name, compound_name, Compound_Name, compound, etc.) for compound names in the output database.</p>
+<p>• Example CSV format:</p>
+<p>smiles,name</p>
+<p>CCO,Ethanol</p>
+<p>CC(=O)Oc1ccccc1C(=O)O,Aspirin</p>
+<p>...</p>
+<h4 id="2-set-input-and-output-paths">② Set input and output paths</h4>
+<p>• Click Browse next to Input CSV File and select your CSV file.</p>
+<p>• Click Browse next to Output NPZ File and choose the output path (e.g. Database/my_database.npz). The file will be created or overwritten.</p>
+<h4 id="3-generate-database">③ Generate database</h4>
+<p>• Click Generate Database. Generation runs in a background thread. Progress and log messages appear in the right panel.</p>
+<p>• The tool: (1) reads the CSV and finds the SMILES column, (2) validates SMILES with RDKit and removes invalid entries, (3) deduplicates, (4) computes formula, exact mass, and adduct m/z values, (5) generates Pubchem fingerprints via PaDEL, (6) saves the NPZ file.</p>
+<p>• On completion, a success dialog appears. Use Clear to reset the form and start a new run.</p>
+<h4 id="4-output-and-use">④ Output and use</h4>
+<p>• The NPZ file contains: smiles, formula, Molecular_Weight, M-H, M+H, M+Na, M+K, M-2H, M+2H, M+2Na (m/z values), PubchemFP (fingerprint matrix), name.</p>
+<p>• Use this NPZ file as the AI Database in MS Identification (AI Search Method) or Molecular Networks (AI Search Parameters). Set Database to the path of the generated .npz file.</p>
+<h3 id="4-faq_4">4) FAQ</h3>
+<ol>
+<li>"Could not find SMILES column in CSV file"</li>
+</ol>
+<p>Ensure the CSV has a column named smiles, SMILES, Smiles, SMILES_string, or smiles_string. If using a different name, try renaming it to smiles. The tool may auto-detect SMILES-like columns in some cases.</p>
+<ol>
+<li>"No valid SMILES found" or many SMILES skipped</li>
+</ol>
+<p>RDKit validates each SMILES. Invalid or malformed SMILES are skipped. Check that your SMILES are valid (e.g. test with RDKit or an online validator). Remove or fix invalid rows. Ensure the column contains actual SMILES strings, not InChI or other formats.</p>
+<ol>
+<li>PaDEL-Descriptor or fingerprint generation fails</li>
+</ol>
+<p>AI DatabaseGen uses PaDEL-Descriptor (padelpy) to generate Pubchem fingerprints. Ensure PaDEL is installed and the padelpy Python package is available. If PaDEL fails, the fingerprint step may error; check the log for details.</p>
+<ol>
+<li>Output NPZ format: what does MS Identification expect?</li>
+</ol>
+<p>The NPZ should contain smiles, formula, Molecular_Weight, ion m/z columns (e.g. M-H, M+H), and PubchemFP. The DNN model in MS Identification and Molecular Networks uses PubchemFP for similarity matching. Ensure the generated NPZ matches the expected format (e.g. same as MSFPDB.npz).</p>
+<ol>
+<li>Can I use the database for both positive and negative ion mode?</li>
+</ol>
+<p>Yes. The NPZ includes m/z values for both M+H, M+Na, M+K (positive) and M-H, M-2H (negative). The AI Search in MS Identification and Molecular Networks selects the appropriate adduct based on the spectrum's ion_type.</p>
+<h3 id="5-relation-to-other-modules_4">5) Relation to Other Modules</h3>
+<p>• MS Identification: Uses the generated NPZ as the AI Database in AI Search Method. Load the NPZ with Load Database, then run Batch Identify All Spectra or Identify Single Spectrum.</p>
+<p>• Molecular Networks: Uses the NPZ as the AI Database in AI Search Parameters (Optional). Enable AI Search and set AI Database to the generated .npz path. AI Search runs after network building to identify compounds at network nodes.</p>
+<p>• Batch Metabolomics Analysis: Independent; works with feature tables and CSV. No direct use of the NPZ database. You can use identified compounds from MS Identification (which uses the NPZ) to interpret batch metabolomics results.</p>
+<p>• Advanced Analysis: Does not directly use the NPZ. Advanced Analysis loads AI Search Results (CSV) from prior runs. The NPZ is used by MS Identification and Molecular Networks to produce those results.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "toc.integrate", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

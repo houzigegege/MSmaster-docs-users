@@ -1,0 +1,752 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MSmaster is an academic metabolomics platform for FMN, Metabolic reaction fusion molecular networks (MR-FMN), MS/MS annotation, and traceable molecular network analysis.">
+      
+      
+      
+        <link rel="canonical" href="https://spectroai.github.io/MSmaster/section_04/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>4. Quick Start - MSmaster</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../overrides.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-quick-start" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MSmaster" class="md-header__button md-logo" aria-label="MSmaster" data-md-component="logo">
+      
+  <img src="../Figures/msmaster-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MSmaster
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. Quick Start
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../manual/section_01/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Platform
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../manual/section_02/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Download
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../manual/section_03/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Capabilities
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../manual/section_04/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Workflows
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../manual/section_05/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FMN Analysis
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../manual/section_06/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  MR-FMN
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MSmaster" class="md-nav__button md-logo" aria-label="MSmaster" data-md-component="logo">
+      
+  <img src="../Figures/msmaster-logo.png" alt="logo">
+
+    </a>
+    MSmaster
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manual/section_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manual/section_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manual/section_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capabilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manual/section_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manual/section_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FMN Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manual/section_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MR-FMN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="4-quick-start">4. Quick Start</h1>
+<p>This section describes how to quickly use MSmaster based on the data type you have: what analyses you can run, which features are available, and the main steps. It is intended for first-time users or those who need to quickly find the right workflow.</p>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Main Module</th>
+<th>Core Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature tables (multi-sample CSV)</td>
+<td>Batch Metabolomics Analysis</td>
+<td>Differential analysis, volcano plots, and reaction product annotation.</td>
+</tr>
+<tr>
+<td>MS/MS MGF</td>
+<td>MS Identification; Molecular Networks</td>
+<td>Compound identification and molecular network construction.</td>
+</tr>
+<tr>
+<td>Feature tables + MGF</td>
+<td>Batch Metabolomics + Molecular Networks; or Molecular Networks + Advanced Analysis</td>
+<td>Metabolomics-filtered networks and integration of network and statistical analysis.</td>
+</tr>
+<tr>
+<td>Network files (XGMML/CSV)</td>
+<td>Advanced Analysis</td>
+<td>Network visualization, multi-omics integration, embedding, and reaction analysis.</td>
+</tr>
+<tr>
+<td>SMILES list (CSV)</td>
+<td>AI DatabaseGen</td>
+<td>Generation of NPZ fingerprint databases.</td>
+</tr>
+<tr>
+<td>Reactant MGF</td>
+<td>Advanced Analysis – Reaction Analysis</td>
+<td>Product–reactant matching and reaction type statistics.</td>
+</tr>
+<tr>
+<td>Complete experiment folder</td>
+<td>Advanced Analysis – Auto-Import</td>
+<td>Fully integrated analysis workflow in one interface.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="41-i-have-feature-tables-multi-sample-metabolomics-intensity-data">4.1 I Have Feature Tables — Multi-Sample Metabolomics Intensity Data</h2>
+<p>Data format: CSV files with one metabolite/feature per row (e.g. RT_MZ or compound labels), one sample or group per column (e.g. Group1, Group1.1, Group2), and intensity values. Multiple samples correspond to multiple CSV files in the same folder.</p>
+<p><img alt="" src="../assets/manual/img_0041.png" /></p>
+<p>Available features:</p>
+<p>• Batch Metabolomics analysis: between-group statistical tests and Fold Change (FC) calculation</p>
+<p>• Volcano plots, heatmaps, PCA, HCA, and other visualizations</p>
+<p>• Reaction product prediction and annotation (optional; requires a list of molecular weights)</p>
+<p>Module: Batch Metabolomics Analysis</p>
+<p>Quick steps for Batch Metabolomics analysis:</p>
+<p>Set Project Path (root directory for results);Set Feature Table Folder (folder containing one CSV per sample)</p>
+<p><img alt="" src="../assets/manual/img_0042.png" /></p>
+<p>Expand Batch Metabolomics Analysis and click Start Batch Analysis</p>
+<p><img alt="" src="../assets/manual/img_0043.png" /></p>
+<p>View results in the Single Sample Result panels on the right. Select a sample and click the analyze button.</p>
+<p><img alt="" src="../assets/manual/img_0044.png" /></p>
+<p>Visualization results</p>
+<p><img alt="" src="../assets/manual/img_0045.png" /></p>
+<p>(Optional) Enter molecular weights in Input Data, configure Manage Reaction Types, and click Run Prediction</p>
+<p><img alt="" src="../assets/manual/img_0046.png" /></p>
+<p>(Optional) reaction product annotation results</p>
+<p><img alt="" src="../assets/manual/img_0047.png" /></p>
+<h2 id="42-i-have-msms-spectra-mgf-format">4.2 I Have MS/MS Spectra (MGF Format)</h2>
+<p>Data format: MGF file containing MS/MS spectra (precursor m/z, RT, fragment peaks, etc.).</p>
+<p>Available features:</p>
+<p>• Compound identification: spectral similarity (Basic Search) or AI fingerprint (AI Search)</p>
+<p>• Molecular network construction: discover metabolite relationships and visualize molecular families from spectral similarity</p>
+<p>Module: MS Identification, Molecular Networks</p>
+<p>Quick steps (MS Identification):</p>
+<p>① Select Mass Spectrum File (MGF) and set Acquisition Mode (Positive/Negative)</p>
+<p>② Click Load Mass Spectrum File</p>
+<p>③ Basic Search: Load MGF database → Set m/z tolerance, similarity method, TOP N → Run Basic Search</p>
+<p>④ AI Search: Load NPZ fingerprint database → Select DNN model type and checkpoint → Set Mass Tolerance, Min DNN Similarity → Batch Identify All Spectra</p>
+<p>⑤ View candidate compounds in Identification Results (Basic) or Identification Results (AI)</p>
+<p>Quick steps (Molecular Networks):</p>
+<p>① Set Single Experiment Path (output directory)</p>
+<p>② Select MGF File</p>
+<p>③ Expand Analysis Parameters and choose Similarity Method (cosine, neutral_loss, dnn_fingerprint, Transformer_DNN, or hierarchical_fusion)</p>
+<p>④ Set Similarity Threshold, Max Edges per Node, etc.</p>
+<p>⑤ Click Start Network Analysis</p>
+<p>⑥ Select Network Component on the right to view the graph; click nodes to view spectra and AI identification results (if AI Search is enabled)</p>
+<h2 id="43-i-have-feature-tables-msms-spectra">4.3 I Have Feature Tables + MS/MS Spectra</h2>
+<p>Available features:</p>
+<p>• Run Batch Metabolomics for differential analysis, then use Molecular Networks Metabolomics Filter to filter spectra by experimental/control ratio before building the network</p>
+<p>• Or build the network first, then load metabolomics data in Advanced Analysis for node coloring, box plots, etc.</p>
+<p>Module: Batch Metabolomics Analysis → Molecular Networks; or Molecular Networks → Advanced Analysis</p>
+<p>Quick steps (metabolomics-filtered network):</p>
+<p>① Complete batch analysis in Batch Metabolomics to obtain FeatureTable.csv and MetaboResult.csv per sample</p>
+<p>② In Molecular Networks, set MGF File and Experiment Path</p>
+<p>③ Expand Filter Settings and enable Metabolomics Filter: set Feature Table File, Experimental Group, Control Group, Ratio Threshold</p>
+<p>④ Follow steps in section 2 to build the network</p>
+<p>Quick steps (integrate metabolomics after network building):</p>
+<p>① Complete network analysis in Molecular Networks and click Export All Results</p>
+<p>② In Advanced Analysis, set Experiment Folder to the Molecular Networks output directory and click Auto-Import Files</p>
+<p>③ Load Metabolomics Data (Feature Table, Metabolomics Results); click nodes in Network Visualization to view box plots and intensity-based coloring</p>
+<h2 id="45-i-have-a-smiles-list-csv">4.5 I Have a SMILES List (CSV)</h2>
+<p>Data format: CSV file with at least one column named smiles or SMILES containing SMILES strings.</p>
+<p>Available features:</p>
+<p>• Generate NPZ fingerprint database for use in MS Identification and Molecular Networks AI Search</p>
+<p>Module: AI DatabaseGen</p>
+<p>Quick steps:</p>
+<p>① Select Input CSV (with SMILES column)</p>
+<p>② Set Output NPZ path</p>
+<p>③ Click Generate Database</p>
+<p>④ In MS Identification or Molecular Networks AI Search, set Database to the generated .npz file</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "toc.integrate", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
